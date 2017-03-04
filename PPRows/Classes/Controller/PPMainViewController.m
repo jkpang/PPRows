@@ -19,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    // 设置垂直滚动条的样式
+    self.tableView.enclosingScrollView.scrollerStyle = NSScrollerStyleOverlay;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView

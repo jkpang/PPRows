@@ -83,11 +83,11 @@
 		350DE07B1E6AD6F900C5818E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				350DE07C1E6AD6F900C5818E /* AppDelegate */,
 				350DE0851E6AD6F900C5818E /* Utils */,
 				350DE0841E6AD6F900C5818E /* Model */,
 				350DE0861E6AD6F900C5818E /* View */,
 				350DE07F1E6AD6F900C5818E /* Controller */,
-				350DE07C1E6AD6F900C5818E /* AppDelegate */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

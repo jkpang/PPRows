@@ -2,7 +2,7 @@
 //  PPTableCellView.h
 //  PPRows
 //
-//  Created by 朵颐 on 17/3/4.
+//  Created by AndyPang on 2017/3/4.
 //  Copyright © 2017年 AndyPang. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  PPTableCellView.m
 //  PPRows
 //
-//  Created by 朵颐 on 17/3/4.
+//  Created by AndyPang on 2017/3/4.
 //  Copyright © 2017年 AndyPang. All rights reserved.
 //
 
@@ -10,6 +10,10 @@
 
 @implementation PPTableCellView
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+}
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
