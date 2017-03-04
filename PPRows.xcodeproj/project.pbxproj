@@ -10,9 +10,10 @@
 		22F0E9F91E6A796B00FF7F7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0E9F81E6A796B00FF7F7D /* main.m */; };
 		22F0E9FE1E6A796B00FF7F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */; };
 		22F0EA011E6A796B00FF7F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FF1E6A796B00FF7F7D /* Main.storyboard */; };
-		22F0EA131E6A7DC900FF7F7D /* PPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0EA101E6A7DC900FF7F7D /* PPMainViewController.m */; };
-		22F0EA141E6A7DCA00FF7F7D /* PPWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0EA121E6A7DC900FF7F7D /* PPWindowController.m */; };
-		22F0EA181E6A7DD200FF7F7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0EA171E6A7DD200FF7F7D /* AppDelegate.m */; };
+		350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE07E1E6AD6F900C5818E /* AppDelegate.m */; };
+		350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE0811E6AD6F900C5818E /* PPMainViewController.m */; };
+		350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE0831E6AD6F900C5818E /* PPWindowController.m */; };
+		350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE08B1E6AD84100C5818E /* PPTableCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +22,14 @@
 		22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F0EA001E6A796B00FF7F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22F0EA021E6A796B00FF7F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22F0EA0F1E6A7DC900FF7F7D /* PPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainViewController.h; sourceTree = "<group>"; };
-		22F0EA101E6A7DC900FF7F7D /* PPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMainViewController.m; sourceTree = "<group>"; };
-		22F0EA111E6A7DC900FF7F7D /* PPWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWindowController.h; sourceTree = "<group>"; };
-		22F0EA121E6A7DC900FF7F7D /* PPWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWindowController.m; sourceTree = "<group>"; };
-		22F0EA161E6A7DD200FF7F7D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		22F0EA171E6A7DD200FF7F7D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		350DE07D1E6AD6F900C5818E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		350DE07E1E6AD6F900C5818E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		350DE0801E6AD6F900C5818E /* PPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainViewController.h; sourceTree = "<group>"; };
+		350DE0811E6AD6F900C5818E /* PPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMainViewController.m; sourceTree = "<group>"; };
+		350DE0821E6AD6F900C5818E /* PPWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWindowController.h; sourceTree = "<group>"; };
+		350DE0831E6AD6F900C5818E /* PPWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWindowController.m; sourceTree = "<group>"; };
+		350DE08A1E6AD84100C5818E /* PPTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableCellView.h; sourceTree = "<group>"; };
+		350DE08B1E6AD84100C5818E /* PPTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +62,7 @@
 		22F0E9F31E6A796B00FF7F7D /* PPRows */ = {
 			isa = PBXGroup;
 			children = (
-				22F0EA0E1E6A7DC900FF7F7D /* Controller */,
-				22F0EA151E6A7DD200FF7F7D /* AppDelegate */,
+				350DE07B1E6AD6F900C5818E /* Classes */,
 				22F0E9F71E6A796B00FF7F7D /* Supporting Files */,
 				22F0E9F21E6A796B00FF7F7D /* Products */,
 			);
@@ -70,32 +72,67 @@
 		22F0E9F71E6A796B00FF7F7D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				22F0E9F81E6A796B00FF7F7D /* main.m */,
-				22F0EA021E6A796B00FF7F7D /* Info.plist */,
 				22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */,
 				22F0E9FF1E6A796B00FF7F7D /* Main.storyboard */,
+				22F0E9F81E6A796B00FF7F7D /* main.m */,
+				22F0EA021E6A796B00FF7F7D /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		22F0EA0E1E6A7DC900FF7F7D /* Controller */ = {
+		350DE07B1E6AD6F900C5818E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				22F0EA111E6A7DC900FF7F7D /* PPWindowController.h */,
-				22F0EA121E6A7DC900FF7F7D /* PPWindowController.m */,
-				22F0EA0F1E6A7DC900FF7F7D /* PPMainViewController.h */,
-				22F0EA101E6A7DC900FF7F7D /* PPMainViewController.m */,
+				350DE0851E6AD6F900C5818E /* Utils */,
+				350DE0841E6AD6F900C5818E /* Model */,
+				350DE0861E6AD6F900C5818E /* View */,
+				350DE07F1E6AD6F900C5818E /* Controller */,
+				350DE07C1E6AD6F900C5818E /* AppDelegate */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		350DE07C1E6AD6F900C5818E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				350DE07D1E6AD6F900C5818E /* AppDelegate.h */,
+				350DE07E1E6AD6F900C5818E /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		350DE07F1E6AD6F900C5818E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350DE0801E6AD6F900C5818E /* PPMainViewController.h */,
+				350DE0811E6AD6F900C5818E /* PPMainViewController.m */,
+				350DE0821E6AD6F900C5818E /* PPWindowController.h */,
+				350DE0831E6AD6F900C5818E /* PPWindowController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		22F0EA151E6A7DD200FF7F7D /* AppDelegate */ = {
+		350DE0841E6AD6F900C5818E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				22F0EA161E6A7DD200FF7F7D /* AppDelegate.h */,
-				22F0EA171E6A7DD200FF7F7D /* AppDelegate.m */,
 			);
-			path = AppDelegate;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		350DE0851E6AD6F900C5818E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		350DE0861E6AD6F900C5818E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				350DE08A1E6AD84100C5818E /* PPTableCellView.h */,
+				350DE08B1E6AD84100C5818E /* PPTableCellView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F0EA181E6A7DD200FF7F7D /* AppDelegate.m in Sources */,
+				350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */,
+				350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */,
+				350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */,
 				22F0E9F91E6A796B00FF7F7D /* main.m in Sources */,
-				22F0EA131E6A7DC900FF7F7D /* PPMainViewController.m in Sources */,
-				22F0EA141E6A7DCA00FF7F7D /* PPWindowController.m in Sources */,
+				350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +362,7 @@
 				22F0EA071E6A796B00FF7F7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
