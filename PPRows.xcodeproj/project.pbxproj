@@ -10,6 +10,8 @@
 		22F0E9F91E6A796B00FF7F7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0E9F81E6A796B00FF7F7D /* main.m */; };
 		22F0E9FE1E6A796B00FF7F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */; };
 		22F0EA011E6A796B00FF7F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FF1E6A796B00FF7F7D /* Main.storyboard */; };
+		22F0EA1E1E6BC61300FF7F7D /* PPDragDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */; };
+		22F0EA211E6BED5D00FF7F7D /* PPRowsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0EA201E6BED5D00FF7F7D /* PPRowsEngine.m */; };
 		350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE07E1E6AD6F900C5818E /* AppDelegate.m */; };
 		350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE0811E6AD6F900C5818E /* PPMainViewController.m */; };
 		350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE0831E6AD6F900C5818E /* PPWindowController.m */; };
@@ -22,6 +24,10 @@
 		22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F0EA001E6A796B00FF7F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22F0EA021E6A796B00FF7F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F0EA1C1E6BC61300FF7F7D /* PPDragDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDragDropView.h; sourceTree = "<group>"; };
+		22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDragDropView.m; sourceTree = "<group>"; };
+		22F0EA1F1E6BED5D00FF7F7D /* PPRowsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPRowsEngine.h; path = PPRows/Classes/View/PPRowsEngine.h; sourceTree = SOURCE_ROOT; };
+		22F0EA201E6BED5D00FF7F7D /* PPRowsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPRowsEngine.m; path = PPRows/Classes/View/PPRowsEngine.m; sourceTree = SOURCE_ROOT; };
 		350DE07D1E6AD6F900C5818E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		350DE07E1E6AD6F900C5818E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		350DE0801E6AD6F900C5818E /* PPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainViewController.h; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 		350DE0851E6AD6F900C5818E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				22F0EA1F1E6BED5D00FF7F7D /* PPRowsEngine.h */,
+				22F0EA201E6BED5D00FF7F7D /* PPRowsEngine.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -131,6 +139,8 @@
 			children = (
 				350DE08A1E6AD84100C5818E /* PPTableCellView.h */,
 				350DE08B1E6AD84100C5818E /* PPTableCellView.m */,
+				22F0EA1C1E6BC61300FF7F7D /* PPDragDropView.h */,
+				22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 		22F0E9E91E6A796B00FF7F7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PP;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = AndyPang;
 				TargetAttributes = {
@@ -208,9 +219,11 @@
 			files = (
 				350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */,
 				350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */,
+				22F0EA211E6BED5D00FF7F7D /* PPRowsEngine.m in Sources */,
 				350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */,
 				22F0E9F91E6A796B00FF7F7D /* main.m in Sources */,
 				350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */,
+				22F0EA1E1E6BC61300FF7F7D /* PPDragDropView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -699,6 +699,23 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="IeH-oR-ePf" customClass="PPDragDropView">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-xe-XqZ">
+                                        <rect key="frame" x="12" y="14" width="42" height="17"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="Total: " id="EfS-zW-9JD">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CLt-xe-XqZ" secondAttribute="bottom" constant="14" id="CvN-O3-uMD"/>
+                                    <constraint firstItem="CLt-xe-XqZ" firstAttribute="leading" secondItem="IeH-oR-ePf" secondAttribute="leading" constant="14" id="TYu-yi-TNl"/>
+                                </constraints>
+                            </customView>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="46" horizontalPageScroll="10" verticalLineScroll="46" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-dT-sTM">
                                 <rect key="frame" x="0.0" y="40" width="350" height="283"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="u05-fI-LLd">
@@ -737,7 +754,7 @@
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="folder" id="gZM-bk-zNs"/>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ozs-jV-mFw">
-                                                                    <rect key="frame" x="67" y="25" width="88" height="18"/>
+                                                                    <rect key="frame" x="67" y="25" width="235" height="18"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="FolderName" id="TjD-VD-Fkb">
                                                                         <font key="font" metaFont="systemBold" size="14"/>
                                                                         <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
@@ -762,6 +779,7 @@
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="ozs-jV-mFw" secondAttribute="trailing" constant="50" id="0xk-sG-XHO"/>
                                                                 <constraint firstItem="ozs-jV-mFw" firstAttribute="top" secondItem="5k3-BR-VSx" secondAttribute="top" constant="2" id="GLt-Dz-0hb"/>
                                                                 <constraint firstItem="P2Q-co-rWb" firstAttribute="bottom" secondItem="5f3-Pk-pfg" secondAttribute="bottom" id="Gom-Zm-6vJ"/>
                                                                 <constraint firstItem="ozs-jV-mFw" firstAttribute="leading" secondItem="5k3-BR-VSx" secondAttribute="trailing" constant="15" id="Hum-rg-ySe"/>
@@ -771,6 +789,12 @@
                                                                 <constraint firstItem="P2Q-co-rWb" firstAttribute="leading" secondItem="5f3-Pk-pfg" secondAttribute="trailing" constant="10" id="gHc-zD-wv3"/>
                                                                 <constraint firstItem="5f3-Pk-pfg" firstAttribute="bottom" secondItem="5k3-BR-VSx" secondAttribute="bottom" constant="-2" id="n2I-Fm-r2b"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="codeRows" destination="P2Q-co-rWb" id="Wgl-oK-43j"/>
+                                                                <outlet property="fileImageView" destination="5k3-BR-VSx" id="XWT-6O-LPv"/>
+                                                                <outlet property="fileName" destination="ozs-jV-mFw" id="fUH-nn-edi"/>
+                                                                <outlet property="fileNumber" destination="5f3-Pk-pfg" id="3wM-QW-4Dy"/>
+                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
@@ -792,31 +816,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-xe-XqZ">
-                                <rect key="frame" x="12" y="14" width="42" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="Total: " id="EfS-zW-9JD">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="nUL-HF-Spq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="27c-c3-A4b"/>
+                            <constraint firstAttribute="bottom" secondItem="IeH-oR-ePf" secondAttribute="bottom" id="51b-nS-OVp"/>
                             <constraint firstItem="DOz-dT-sTM" firstAttribute="top" secondItem="YAP-zv-S1U" secondAttribute="bottom" constant="5" id="5Ns-Og-lZW"/>
                             <constraint firstItem="nUL-HF-Spq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ET1-AH-IOr"/>
                             <constraint firstItem="YAP-zv-S1U" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="FkD-uz-Vh6"/>
                             <constraint firstAttribute="trailing" secondItem="DOz-dT-sTM" secondAttribute="trailing" id="KBt-Oi-Q5J"/>
+                            <constraint firstItem="IeH-oR-ePf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="MIL-Jw-NG4"/>
                             <constraint firstItem="DOz-dT-sTM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="OEr-ye-0KZ"/>
-                            <constraint firstItem="CLt-xe-XqZ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="14" id="PeF-B1-nll"/>
                             <constraint firstAttribute="bottom" secondItem="nUL-HF-Spq" secondAttribute="bottom" id="Zpb-zC-NA9"/>
-                            <constraint firstAttribute="bottom" secondItem="CLt-xe-XqZ" secondAttribute="bottom" constant="14" id="aPE-OQ-3MA"/>
                             <constraint firstAttribute="bottom" secondItem="DOz-dT-sTM" secondAttribute="bottom" constant="40" id="cSN-sU-WG7"/>
                             <constraint firstAttribute="trailing" secondItem="nUL-HF-Spq" secondAttribute="trailing" id="co6-q5-isl"/>
                             <constraint firstItem="YAP-zv-S1U" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fdF-SC-mq9"/>
+                            <constraint firstItem="IeH-oR-ePf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fdU-co-uJ6"/>
+                            <constraint firstAttribute="trailing" secondItem="IeH-oR-ePf" secondAttribute="trailing" id="kGs-1f-EEW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dragDropView" destination="IeH-oR-ePf" id="k4c-9h-syi"/>
                         <outlet property="tableView" destination="joD-JN-IiP" id="QVQ-po-E9o"/>
                     </connections>
                 </viewController>

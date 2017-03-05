@@ -1,48 +1,16 @@
 //
-//  PPTableCellView.m
+//  PPRowsEngine.m
 //  PPRows
 //
-//  Created by AndyPang on 2017/3/4.
+//  Created by AndyPang on 2017/3/5.
 //  Copyright © 2017年 AndyPang. All rights reserved.
 //
 
-#import "PPTableCellView.h"
 #import "PPRowsEngine.h"
 
-@interface PPTableCellView ()
-/** 文件图片*/
-@property (weak) IBOutlet NSImageView *fileImageView;
-/** 文件名*/
-@property (weak) IBOutlet NSTextField *fileName;
-/** 文件夹内文件数量*/
-@property (weak) IBOutlet NSTextField *fileNumber;
-/** 该文件内总代码行数*/
-@property (weak) IBOutlet NSTextField *codeRows;
+@implementation PPRowsEngine
 
-@end
-
-@implementation PPTableCellView
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-}
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    // Drawing code here.
-}
-
-- (void)fillCellWithFilePath:(NSString *)path
-{
-    NSArray *folderArray = [path componentsSeparatedByString:@"/"];
-    self.fileName.stringValue = folderArray.lastObject;
-    PPRowsResult result = [PPRowsEngine codeLineCount:path];
-    self.fileNumber.stringValue = [NSString stringWithFormat:@"Files: %ld",result.fileNumbser];
-    self.codeRows.stringValue = [NSString stringWithFormat:@"Rows: %ld",result.codeRows];
-}
-
-
-- (NSUInteger)codeLineCount:(NSString *)path
++ (PPRowsResult)codeLineCount:(NSString *)path
 {
     // 1.获得文件管理者
     NSFileManager *mgr = [NSFileManager defaultManager];
@@ -56,7 +24,7 @@
     if(!exist)
     {
         NSLog(@"文件路径不存在!!!!!!");
-        return 0;
+        return (PPRowsResult){0,0};
     }
     if (dir)
     { // 文件夹
@@ -64,8 +32,8 @@
         NSArray *array = [mgr contentsOfDirectoryAtPath:path error:nil];
         
         // 定义一个变量保存path中所有文件的总行数
-        int count = 0;
-        
+        NSUInteger count = 0;
+        NSUInteger fileNumber = 0;
         // 遍历数组中的所有子文件（夹）名
         for (NSString *filename in array)
         {
@@ -73,12 +41,16 @@
             NSString *fullPath = [NSString stringWithFormat:@"%@/%@", path, filename];
             
             // 累加每个子路径的总行数
-            count += [self codeLineCount:fullPath];
+            PPRowsResult result = [self codeLineCount:fullPath];
+            fileNumber = result.fileNumbser;
+            count += result.codeRows;
         }
-        return count;
+        return (PPRowsResult){fileNumber,count};
     }
     else
-    { // 文件
+    {
+        // 文件
+        static NSUInteger fileNumber = 0;
         // 判断文件的拓展名(忽略大小写)
         NSString *extension = [[path pathExtension] lowercaseString];
         if (![extension isEqualToString:@"h"]
@@ -86,16 +58,19 @@
             && ![extension isEqualToString:@"c"])
         {
             // 文件拓展名不是h，而且也不是m，而且也不是c
-            return 0;
+            return (PPRowsResult){fileNumber,0};
         }
-        
+        fileNumber++;
         // 加载文件内容
         NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         
         // 将文件内容切割为每一行
         NSArray *array = [content componentsSeparatedByString:@"\n"];
-        return array.count;
+        
+        return (PPRowsResult){fileNumber,array.count};
     }
     
 }
+
+
 @end

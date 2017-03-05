@@ -10,4 +10,8 @@
 
 @interface PPTableCellView : NSTableCellView
 
+@property (nonatomic, copy) void(^reloadRowsBlock)(void);
+
+- (void)fillCellWithFilePath:(NSString *)path;
+
 @end
