@@ -36,7 +36,7 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     PPTableCellView *cell = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
-    [cell fillCellWithFilePath:self.dataSource[row]];
+    [cell fillCellWithFilePath:self.dataSource[row] index:row+1];
     
     __weak typeof(self) weakSelf = self;
     cell.reloadRowsBlock = ^{

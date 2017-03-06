@@ -1,0 +1,24 @@
+//
+//  PPRowsPrefixHeader.pch
+//  PPRows
+//
+//  Created by AndyPang on 17/3/6.
+//  Copyright © 2017年 AndyPang. All rights reserved.
+//
+
+#ifndef PPRowsPrefixHeader_pch
+#define PPRowsPrefixHeader_pch
+
+//----------------日志打印------------------//
+#ifdef DEBUG
+#define PPLog(...) printf("[%s] %s [第%d行]: %s\n", __TIME__ ,__PRETTY_FUNCTION__ ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
+#else
+#define PPLog(...)
+#endif
+
+//----------------字符串拼接------------------//
+#define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
+
+#import "NSColor+PPRows.h"
+
+#endif /* PPRowsPrefixHeader_pch */

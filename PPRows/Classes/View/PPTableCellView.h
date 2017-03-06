@@ -12,6 +12,6 @@
 
 @property (nonatomic, copy) void(^reloadRowsBlock)(void);
 
-- (void)fillCellWithFilePath:(NSString *)path;
+- (void)fillCellWithFilePath:(NSString *)path index:(NSUInteger)index;
 
 @end

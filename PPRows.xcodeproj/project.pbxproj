@@ -11,11 +11,15 @@
 		22F0E9FE1E6A796B00FF7F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */; };
 		22F0EA011E6A796B00FF7F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FF1E6A796B00FF7F7D /* Main.storyboard */; };
 		22F0EA1E1E6BC61300FF7F7D /* PPDragDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */; };
-		22F0EA211E6BED5D00FF7F7D /* PPRowsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0EA201E6BED5D00FF7F7D /* PPRowsEngine.m */; };
 		350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE07E1E6AD6F900C5818E /* AppDelegate.m */; };
 		350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE0811E6AD6F900C5818E /* PPMainViewController.m */; };
 		350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE0831E6AD6F900C5818E /* PPWindowController.m */; };
 		350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE08B1E6AD84100C5818E /* PPTableCellView.m */; };
+		35E1E0241E6D6EE1006C98F4 /* PPRowsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0211E6D6EE1006C98F4 /* PPRowsEngine.m */; };
+		35E1E0291E6D71AC006C98F4 /* PPCounterConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0261E6D71AC006C98F4 /* PPCounterConst.m */; };
+		35E1E02A1E6D71AC006C98F4 /* PPCounterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0281E6D71AC006C98F4 /* PPCounterEngine.m */; };
+		35E1E0321E6D892D006C98F4 /* NSAttributedString+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */; };
+		35E1E0351E6D8950006C98F4 /* NSColor+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +30,6 @@
 		22F0EA021E6A796B00FF7F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F0EA1C1E6BC61300FF7F7D /* PPDragDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDragDropView.h; sourceTree = "<group>"; };
 		22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDragDropView.m; sourceTree = "<group>"; };
-		22F0EA1F1E6BED5D00FF7F7D /* PPRowsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPRowsEngine.h; path = PPRows/Classes/View/PPRowsEngine.h; sourceTree = SOURCE_ROOT; };
-		22F0EA201E6BED5D00FF7F7D /* PPRowsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPRowsEngine.m; path = PPRows/Classes/View/PPRowsEngine.m; sourceTree = SOURCE_ROOT; };
 		350DE07D1E6AD6F900C5818E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		350DE07E1E6AD6F900C5818E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		350DE0801E6AD6F900C5818E /* PPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainViewController.h; sourceTree = "<group>"; };
@@ -36,6 +38,18 @@
 		350DE0831E6AD6F900C5818E /* PPWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWindowController.m; sourceTree = "<group>"; };
 		350DE08A1E6AD84100C5818E /* PPTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableCellView.h; sourceTree = "<group>"; };
 		350DE08B1E6AD84100C5818E /* PPTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableCellView.m; sourceTree = "<group>"; };
+		35E1E01F1E6D6EE1006C98F4 /* PPCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCounter.h; sourceTree = "<group>"; };
+		35E1E0201E6D6EE1006C98F4 /* PPRowsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRowsEngine.h; sourceTree = "<group>"; };
+		35E1E0211E6D6EE1006C98F4 /* PPRowsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRowsEngine.m; sourceTree = "<group>"; };
+		35E1E0251E6D71AC006C98F4 /* PPCounterConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCounterConst.h; sourceTree = "<group>"; };
+		35E1E0261E6D71AC006C98F4 /* PPCounterConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCounterConst.m; sourceTree = "<group>"; };
+		35E1E0271E6D71AC006C98F4 /* PPCounterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCounterEngine.h; sourceTree = "<group>"; };
+		35E1E0281E6D71AC006C98F4 /* PPCounterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCounterEngine.m; sourceTree = "<group>"; };
+		35E1E02E1E6D868A006C98F4 /* PPRowsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRowsPrefixHeader.pch; sourceTree = "<group>"; };
+		35E1E0301E6D892D006C98F4 /* NSAttributedString+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+PPRows.h"; sourceTree = "<group>"; };
+		35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+PPRows.m"; sourceTree = "<group>"; };
+		35E1E0331E6D8950006C98F4 /* NSColor+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+PPRows.h"; sourceTree = "<group>"; };
+		35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+PPRows.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +96,7 @@
 				22F0E9FF1E6A796B00FF7F7D /* Main.storyboard */,
 				22F0E9F81E6A796B00FF7F7D /* main.m */,
 				22F0EA021E6A796B00FF7F7D /* Info.plist */,
+				35E1E02E1E6D868A006C98F4 /* PPRowsPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -89,11 +104,11 @@
 		350DE07B1E6AD6F900C5818E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				350DE07C1E6AD6F900C5818E /* AppDelegate */,
 				350DE0851E6AD6F900C5818E /* Utils */,
 				350DE0841E6AD6F900C5818E /* Model */,
 				350DE0861E6AD6F900C5818E /* View */,
 				350DE07F1E6AD6F900C5818E /* Controller */,
+				350DE07C1E6AD6F900C5818E /* AppDelegate */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -128,8 +143,10 @@
 		350DE0851E6AD6F900C5818E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				22F0EA1F1E6BED5D00FF7F7D /* PPRowsEngine.h */,
-				22F0EA201E6BED5D00FF7F7D /* PPRowsEngine.m */,
+				35E1E0201E6D6EE1006C98F4 /* PPRowsEngine.h */,
+				35E1E0211E6D6EE1006C98F4 /* PPRowsEngine.m */,
+				35E1E02F1E6D892D006C98F4 /* Categories */,
+				35E1E0191E6D6EE1006C98F4 /* PPCounter */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -143,6 +160,29 @@
 				22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		35E1E0191E6D6EE1006C98F4 /* PPCounter */ = {
+			isa = PBXGroup;
+			children = (
+				35E1E01F1E6D6EE1006C98F4 /* PPCounter.h */,
+				35E1E0251E6D71AC006C98F4 /* PPCounterConst.h */,
+				35E1E0261E6D71AC006C98F4 /* PPCounterConst.m */,
+				35E1E0271E6D71AC006C98F4 /* PPCounterEngine.h */,
+				35E1E0281E6D71AC006C98F4 /* PPCounterEngine.m */,
+			);
+			path = PPCounter;
+			sourceTree = "<group>";
+		};
+		35E1E02F1E6D892D006C98F4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				35E1E0331E6D8950006C98F4 /* NSColor+PPRows.h */,
+				35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */,
+				35E1E0301E6D892D006C98F4 /* NSAttributedString+PPRows.h */,
+				35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,11 +259,15 @@
 			files = (
 				350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */,
 				350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */,
-				22F0EA211E6BED5D00FF7F7D /* PPRowsEngine.m in Sources */,
+				35E1E02A1E6D71AC006C98F4 /* PPCounterEngine.m in Sources */,
+				35E1E0291E6D71AC006C98F4 /* PPCounterConst.m in Sources */,
 				350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */,
 				22F0E9F91E6A796B00FF7F7D /* main.m in Sources */,
+				35E1E0321E6D892D006C98F4 /* NSAttributedString+PPRows.m in Sources */,
+				35E1E0351E6D8950006C98F4 /* NSColor+PPRows.m in Sources */,
 				350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */,
 				22F0EA1E1E6BC61300FF7F7D /* PPDragDropView.m in Sources */,
+				35E1E0241E6D6EE1006C98F4 /* PPRowsEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +378,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = YY4NTQ7LN8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PPRows/PPRowsPrefixHeader.pch";
 				INFOPLIST_FILE = PPRows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -348,6 +394,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = YY4NTQ7LN8;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PPRows/PPRowsPrefixHeader.pch";
 				INFOPLIST_FILE = PPRows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
