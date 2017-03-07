@@ -8,10 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@protocol PPDragDropViewDelegate <NSObject>
-- (void)dragDropFileList:(NSArray<NSString *> *)fileList;
-@end
-
 @interface PPDragDropView : NSView
 
 @property (nonatomic, weak) id<PPDragDropViewDelegate> delegate;

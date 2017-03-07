@@ -44,6 +44,7 @@
 		35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+PPRows.m"; sourceTree = "<group>"; };
 		35E1E0331E6D8950006C98F4 /* NSColor+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+PPRows.h"; sourceTree = "<group>"; };
 		35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+PPRows.m"; sourceTree = "<group>"; };
+		35EE5F8F1E6EAB88007B8FBB /* PPRowsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRowsProtocol.h; sourceTree = "<group>"; };
 		4896E5ACB9D2D6217E4E46E8 /* Pods-PPRows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRows.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPRows/Pods-PPRows.release.xcconfig"; sourceTree = "<group>"; };
 		5E9DD67EA97F6F33D5AE5A3A /* libPods-PPRows.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPRows.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1758B54F144E602FCC4B6E /* Pods-PPRows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPRows/Pods-PPRows.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				350DE0851E6AD6F900C5818E /* Utils */,
+				35EE5F8E1E6EAB17007B8FBB /* Protocol */,
 				350DE0841E6AD6F900C5818E /* Model */,
 				350DE0861E6AD6F900C5818E /* View */,
 				350DE07F1E6AD6F900C5818E /* Controller */,
@@ -125,10 +127,10 @@
 		350DE07F1E6AD6F900C5818E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				350DE0801E6AD6F900C5818E /* PPMainViewController.h */,
-				350DE0811E6AD6F900C5818E /* PPMainViewController.m */,
 				350DE0821E6AD6F900C5818E /* PPWindowController.h */,
 				350DE0831E6AD6F900C5818E /* PPWindowController.m */,
+				350DE0801E6AD6F900C5818E /* PPMainViewController.h */,
+				350DE0811E6AD6F900C5818E /* PPMainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,10 +155,10 @@
 		350DE0861E6AD6F900C5818E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				350DE08A1E6AD84100C5818E /* PPTableCellView.h */,
-				350DE08B1E6AD84100C5818E /* PPTableCellView.m */,
 				22F0EA1C1E6BC61300FF7F7D /* PPDragDropView.h */,
 				22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */,
+				350DE08A1E6AD84100C5818E /* PPTableCellView.h */,
+				350DE08B1E6AD84100C5818E /* PPTableCellView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +172,14 @@
 				35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		35EE5F8E1E6EAB17007B8FBB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				35EE5F8F1E6EAB88007B8FBB /* PPRowsProtocol.h */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		3862B3B18F029772BB619DF0 /* Frameworks */ = {

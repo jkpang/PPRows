@@ -11,13 +11,13 @@
 @implementation NSColor (PPRows)
 
 + (NSColor *)pp_colorWithHex:(UInt32)hex {
-    return [NSColor pp_colorWithHex:hex alpha:1];
+    return [NSColor pp_colorWithHex:hex alpha:1.f];
 }
 
 + (NSColor *)pp_colorWithHex:(UInt32)hex alpha:(CGFloat)alpha {
-    return [NSColor colorWithRed:((hex >> 16) & 0xFF)/255.0
-                           green:((hex >> 8) & 0xFF)/255.0
-                            blue:(hex & 0xFF)/255.0
+    return [NSColor colorWithRed:((hex >> 16) & 0xFF)/255.f
+                           green:((hex >> 8) & 0xFF)/255.f
+                            blue:(hex & 0xFF)/255.f
                            alpha:alpha];
 }
 

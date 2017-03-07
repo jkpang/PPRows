@@ -38,11 +38,11 @@
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
 {
     NSPasteboard *pboard = [sender draggingPasteboard];
-    // 从粘贴板中提取我们想要的NSFilenamesPboardType数据
-    NSArray *fileList = [pboard propertyListForType:NSFilenamesPboardType];
-    // 将文件数组通过代理回调出去
-    if(_delegate && [_delegate respondsToSelector:@selector(dragDropFileList:)]) {
-        [_delegate dragDropFileList:fileList];
+    // 从粘贴板中提取需要的NSFilenamesPboardType数据
+    NSArray *filePathList = [pboard propertyListForType:NSFilenamesPboardType];
+    // 将文件数路径组通过代理回调出去
+    if(_delegate && [_delegate respondsToSelector:@selector(dragDropFilePathList:)]) {
+        [_delegate dragDropFilePathList:filePathList];
     }
 
     return YES;

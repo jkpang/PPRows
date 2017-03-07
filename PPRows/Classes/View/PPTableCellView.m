@@ -8,8 +8,8 @@
 
 #import "PPTableCellView.h"
 #import "PPRowsEngine.h"
-#import "PPCounter.h"
 #import "NSAttributedString+PPRows.h"
+#import <PPCounter.h>
 
 @interface PPTableCellView ()
 /** 文件图片*/
@@ -50,9 +50,13 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[PPRowsEngine rowsEngine] computeWithFilePath:path completion:^(NSUInteger codeFileNumber, NSUInteger codeRows) {
             
+            // 文本信息处理完成的回调
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self countCodeRows:codeRows];
                 [self countCodeFiles:codeFileNumber];
+                if (_delegate && [_delegate respondsToSelector:@selector(countFinishedWithFileNumber:codeRows:)]) {
+                    [_delegate countFinishedWithFileNumber:codeFileNumber codeRows:codeRows];
+                }
             });
             
         } error:^(NSString *errorInfo) {
@@ -72,7 +76,7 @@
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.fileNumber.stringValue
                                                                     rangeText:NSStringFormat(@"%ld",fileNumber)
                                                                 rangeTextFont:[NSFont boldSystemFontOfSize:12]
-                                                               rangeTextColor:!fileNumber?[NSColor redColor]:NSColorHex(0x1AB394)];
+                                                               rangeTextColor:fileNumber?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.fileNumber.attributedStringValue = string;
     }];
 }
@@ -87,16 +91,16 @@
         NSAttributedString *attributedString = [NSAttributedString pp_attributesWithText:self.codeRows.stringValue
                                                                                rangeText:NSStringFormat(@"%ld",codeRows)
                                                                            rangeTextFont:[NSFont boldSystemFontOfSize:12]
-                                                                          rangeTextColor:!codeRows?[NSColor redColor]:NSColorHex(0x1AB394)];
+                                                                          rangeTextColor:codeRows?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.codeRows.attributedStringValue = attributedString;
     }];
 }
 
 - (void)countFinished
 {
-    self.fileName.textColor = [NSColor whiteColor];
-    self.fileNumber.textColor = [NSColor whiteColor];
-    self.codeRows.textColor   = [NSColor whiteColor];
+    self.fileName.textColor = NSColorHex(0xFAF0E1);
+    self.fileNumber.textColor = NSColorHex(0xFAF0E1);
+    self.codeRows.textColor   = NSColorHex(0xFAF0E1);
     self.finishedImageView.hidden = NO;
 }
 

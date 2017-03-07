@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -692,10 +693,10 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="background" id="Ona-AW-LGP"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-zv-S1U">
-                                <rect key="frame" x="149" y="328" width="53" height="17"/>
+                                <rect key="frame" x="148" y="328" width="55" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PPRows" id="UpS-rV-jki">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" red="0.1176470588" green="0.65490196079999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -703,9 +704,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-xe-XqZ">
-                                        <rect key="frame" x="12" y="14" width="42" height="17"/>
+                                        <rect key="frame" x="12" y="14" width="43" height="17"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="Total: " id="EfS-zW-9JD">
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="systemMedium" size="13"/>
                                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -716,7 +717,7 @@
                                     <constraint firstItem="CLt-xe-XqZ" firstAttribute="leading" secondItem="IeH-oR-ePf" secondAttribute="leading" constant="14" id="TYu-yi-TNl"/>
                                 </constraints>
                             </customView>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="46" horizontalPageScroll="10" verticalLineScroll="46" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-dT-sTM">
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="46" horizontalPageScroll="10" verticalLineScroll="46" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-dT-sTM">
                                 <rect key="frame" x="0.0" y="40" width="350" height="283"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="u05-fI-LLd">
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="283"/>
@@ -778,7 +779,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDj-Eq-68p">
-                                                                    <rect key="frame" x="324" y="17" width="16" height="16"/>
+                                                                    <rect key="frame" x="319" y="17" width="16" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="16" id="oY8-km-awt"/>
                                                                         <constraint firstAttribute="height" constant="16" id="yfO-CS-12z"/>
@@ -797,7 +798,7 @@
                                                                 <constraint firstItem="5k3-BR-VSx" firstAttribute="leading" secondItem="bQQ-7g-E3V" secondAttribute="leading" constant="14" id="acK-qK-XPc"/>
                                                                 <constraint firstItem="P2Q-co-rWb" firstAttribute="leading" secondItem="5f3-Pk-pfg" secondAttribute="trailing" constant="10" id="gHc-zD-wv3"/>
                                                                 <constraint firstItem="5f3-Pk-pfg" firstAttribute="bottom" secondItem="5k3-BR-VSx" secondAttribute="bottom" constant="-2" id="n2I-Fm-r2b"/>
-                                                                <constraint firstAttribute="trailing" secondItem="fDj-Eq-68p" secondAttribute="trailing" constant="10" id="xQv-o5-ZbT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="fDj-Eq-68p" secondAttribute="trailing" constant="15" id="xQv-o5-ZbT"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="codeRows" destination="P2Q-co-rWb" id="Wgl-oK-43j"/>
@@ -848,6 +849,7 @@
                     <connections>
                         <outlet property="dragDropView" destination="IeH-oR-ePf" id="k4c-9h-syi"/>
                         <outlet property="tableView" destination="joD-JN-IiP" id="QVQ-po-E9o"/>
+                        <outlet property="totalResult" destination="CLt-xe-XqZ" id="phw-Zp-o3Y"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -857,7 +859,7 @@
     </scenes>
     <resources>
         <image name="background" width="320" height="320"/>
-        <image name="finishe" width="200" height="200"/>
-        <image name="folder" width="200" height="200"/>
+        <image name="finishe" width="32" height="32"/>
+        <image name="folder" width="48" height="48"/>
     </resources>
 </document>
