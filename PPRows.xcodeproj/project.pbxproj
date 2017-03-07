@@ -16,10 +16,9 @@
 		350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE0831E6AD6F900C5818E /* PPWindowController.m */; };
 		350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DE08B1E6AD84100C5818E /* PPTableCellView.m */; };
 		35E1E0241E6D6EE1006C98F4 /* PPRowsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0211E6D6EE1006C98F4 /* PPRowsEngine.m */; };
-		35E1E0291E6D71AC006C98F4 /* PPCounterConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0261E6D71AC006C98F4 /* PPCounterConst.m */; };
-		35E1E02A1E6D71AC006C98F4 /* PPCounterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0281E6D71AC006C98F4 /* PPCounterEngine.m */; };
 		35E1E0321E6D892D006C98F4 /* NSAttributedString+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */; };
 		35E1E0351E6D8950006C98F4 /* NSColor+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */; };
+		47C6F1F92D4139FCFF6A64A2 /* libPods-PPRows.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9DD67EA97F6F33D5AE5A3A /* libPods-PPRows.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,18 +37,16 @@
 		350DE0831E6AD6F900C5818E /* PPWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWindowController.m; sourceTree = "<group>"; };
 		350DE08A1E6AD84100C5818E /* PPTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTableCellView.h; sourceTree = "<group>"; };
 		350DE08B1E6AD84100C5818E /* PPTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTableCellView.m; sourceTree = "<group>"; };
-		35E1E01F1E6D6EE1006C98F4 /* PPCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCounter.h; sourceTree = "<group>"; };
 		35E1E0201E6D6EE1006C98F4 /* PPRowsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRowsEngine.h; sourceTree = "<group>"; };
 		35E1E0211E6D6EE1006C98F4 /* PPRowsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRowsEngine.m; sourceTree = "<group>"; };
-		35E1E0251E6D71AC006C98F4 /* PPCounterConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCounterConst.h; sourceTree = "<group>"; };
-		35E1E0261E6D71AC006C98F4 /* PPCounterConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCounterConst.m; sourceTree = "<group>"; };
-		35E1E0271E6D71AC006C98F4 /* PPCounterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCounterEngine.h; sourceTree = "<group>"; };
-		35E1E0281E6D71AC006C98F4 /* PPCounterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCounterEngine.m; sourceTree = "<group>"; };
 		35E1E02E1E6D868A006C98F4 /* PPRowsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRowsPrefixHeader.pch; sourceTree = "<group>"; };
 		35E1E0301E6D892D006C98F4 /* NSAttributedString+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+PPRows.h"; sourceTree = "<group>"; };
 		35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+PPRows.m"; sourceTree = "<group>"; };
 		35E1E0331E6D8950006C98F4 /* NSColor+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+PPRows.h"; sourceTree = "<group>"; };
 		35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+PPRows.m"; sourceTree = "<group>"; };
+		4896E5ACB9D2D6217E4E46E8 /* Pods-PPRows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRows.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPRows/Pods-PPRows.release.xcconfig"; sourceTree = "<group>"; };
+		5E9DD67EA97F6F33D5AE5A3A /* libPods-PPRows.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPRows.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC1758B54F144E602FCC4B6E /* Pods-PPRows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPRows/Pods-PPRows.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C6F1F92D4139FCFF6A64A2 /* libPods-PPRows.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				22F0E9F31E6A796B00FF7F7D /* PPRows */,
+				3DC2CB133C4F3B405E957A4D /* Pods */,
+				3862B3B18F029772BB619DF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +146,6 @@
 				35E1E0201E6D6EE1006C98F4 /* PPRowsEngine.h */,
 				35E1E0211E6D6EE1006C98F4 /* PPRowsEngine.m */,
 				35E1E02F1E6D892D006C98F4 /* Categories */,
-				35E1E0191E6D6EE1006C98F4 /* PPCounter */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,18 +161,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		35E1E0191E6D6EE1006C98F4 /* PPCounter */ = {
-			isa = PBXGroup;
-			children = (
-				35E1E01F1E6D6EE1006C98F4 /* PPCounter.h */,
-				35E1E0251E6D71AC006C98F4 /* PPCounterConst.h */,
-				35E1E0261E6D71AC006C98F4 /* PPCounterConst.m */,
-				35E1E0271E6D71AC006C98F4 /* PPCounterEngine.h */,
-				35E1E0281E6D71AC006C98F4 /* PPCounterEngine.m */,
-			);
-			path = PPCounter;
-			sourceTree = "<group>";
-		};
 		35E1E02F1E6D892D006C98F4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +172,23 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		3862B3B18F029772BB619DF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E9DD67EA97F6F33D5AE5A3A /* libPods-PPRows.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DC2CB133C4F3B405E957A4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC1758B54F144E602FCC4B6E /* Pods-PPRows.debug.xcconfig */,
+				4896E5ACB9D2D6217E4E46E8 /* Pods-PPRows.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22F0EA051E6A796B00FF7F7D /* Build configuration list for PBXNativeTarget "PPRows" */;
 			buildPhases = (
+				7511A63E5423BC851665DFA1 /* [CP] Check Pods Manifest.lock */,
 				22F0E9ED1E6A796B00FF7F7D /* Sources */,
 				22F0E9EE1E6A796B00FF7F7D /* Frameworks */,
 				22F0E9EF1E6A796B00FF7F7D /* Resources */,
+				CDF0DEB247D00A270EAE15DD /* [CP] Embed Pods Frameworks */,
+				5898872C88E50A1251FF679D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +259,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5898872C88E50A1251FF679D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PPRows/Pods-PPRows-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7511A63E5423BC851665DFA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF0DEB247D00A270EAE15DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PPRows/Pods-PPRows-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22F0E9ED1E6A796B00FF7F7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -259,8 +314,6 @@
 			files = (
 				350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */,
 				350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */,
-				35E1E02A1E6D71AC006C98F4 /* PPCounterEngine.m in Sources */,
-				35E1E0291E6D71AC006C98F4 /* PPCounterConst.m in Sources */,
 				350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */,
 				22F0E9F91E6A796B00FF7F7D /* main.m in Sources */,
 				35E1E0321E6D892D006C98F4 /* NSAttributedString+PPRows.m in Sources */,
@@ -374,6 +427,7 @@
 		};
 		22F0EA061E6A796B00FF7F7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1758B54F144E602FCC4B6E /* Pods-PPRows.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -390,6 +444,7 @@
 		};
 		22F0EA071E6A796B00FF7F7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4896E5ACB9D2D6217E4E46E8 /* Pods-PPRows.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
