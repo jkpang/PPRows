@@ -11,7 +11,8 @@
 @class PPMainModel;
 @interface PPTableCellView : NSTableCellView
 
-- (void)fillCellWithModel:(PPMainModel *)model index:(NSUInteger)index dispatchGroup:(dispatch_group_t)dispatchGroup;
+- (void)fillCellWithModel:(PPMainModel *)model index:(NSUInteger)index;
 
 @property (nonatomic, weak) id<PPTableCellViewDelegate> delegate;
+
 @end

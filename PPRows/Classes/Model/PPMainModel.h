@@ -16,4 +16,6 @@
 @property (nonatomic, assign) NSUInteger fileNumber;
 /** 代码行数*/
 @property (nonatomic, assign) NSUInteger codeRows;
+/** 是否已经计算完成*/
+@property (nonatomic, assign, getter=isCountFinished) BOOL countFinished;
 @end

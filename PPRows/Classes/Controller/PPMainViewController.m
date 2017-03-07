@@ -26,32 +26,20 @@
 @property (nonatomic, strong) NSMutableArray<PPMainModel *> *dataSource;
 @end
 
-@implementation PPMainViewController {
-    dispatch_group_t _group;
-}
+@implementation PPMainViewController
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.totalFiles.stringValue = @"";
+    self.totalRows.stringValue = @"";
     // 设置垂直滚动条的样式
     self.tableView.enclosingScrollView.scrollerStyle = NSScrollerStyleOverlay;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _group = dispatch_group_create();
+
     self.dragDropView.delegate = self;
-    
-    __block NSUInteger fileNumber;
-    __block NSUInteger codeRows;
-    dispatch_group_notify(_group, dispatch_get_main_queue(), ^{
-        for (PPMainModel *model in self.dataSource) {
-            fileNumber += model.fileNumber;
-            codeRows += model.codeRows;
-        }
-        [self countFinishedWithFileNumber:fileNumber codeRows:codeRows];
-    });
-    
 }
 
 #pragma mark - NSTableViewDataSource, NSTableViewDelegate
@@ -63,7 +51,7 @@
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     PPTableCellView *cell = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
-    [cell fillCellWithModel:self.dataSource[row] index:row+1 dispatchGroup:_group];
+    [cell fillCellWithModel:self.dataSource[row] index:row+1];
     cell.delegate = self;
     return cell;
 }
@@ -71,6 +59,11 @@
 #pragma mark - PPDragDropViewDelegate
 - (void)dragDropFilePathList:(NSArray<NSString *> *)filePathList
 {
+    [self.dataSource removeAllObjects];
+    self.totalFiles.stringValue = @"计算中...";
+    self.totalRows.stringValue = @"";
+    
+    // 获取拖拽文件路径数据源, 并组装好数据模型
     for (NSString *filePath in filePathList) {
         PPMainModel *model = [PPMainModel new];
         model.filePath = filePath;
@@ -81,7 +74,22 @@
 }
 
 #pragma mark - PPTableCellViewDelegate
-- (void)countFinishedWithFileNumber:(NSUInteger)fileNumber codeRows:(NSUInteger)codeRows
+- (void)countFinished
+{
+    // 每处理完一个cell的文件, 都计算一次文件数量与代码量
+    NSUInteger fileNumber = 0;
+    NSUInteger codeRows = 0;
+    for (PPMainModel *model in self.dataSource) {
+        if (!model.isCountFinished) {return;}
+        fileNumber += model.fileNumber;
+        codeRows += model.codeRows;
+    }
+    
+    [self countCodeFiles:fileNumber];
+    [self countCodeRows:codeRows];
+}
+
+- (void)countCodeFiles:(NSUInteger)fileNumber
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
         self.totalFiles.stringValue = NSStringFormat(@"共%ld个文件",(NSInteger)number);
@@ -92,9 +100,12 @@
                                                                  rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                 rangeTextColor:fileNumber?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.totalFiles.attributedStringValue = string;
+        
     }];
-    
-    [[PPCounterEngine counterEngine] fromNumber:codeRows toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
+}
+- (void)countCodeRows:(NSUInteger)codeRows
+{
+    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
         self.totalRows.stringValue = NSStringFormat(@"%ld行代码",(NSInteger)number);
     } completion:^{
         
@@ -106,7 +117,11 @@
     }];
 }
 
+
+#pragma mark - lazy
+
 - (NSMutableArray *)dataSource {
+    
     if (!_dataSource) {
         _dataSource = [[NSMutableArray alloc] init];
     }

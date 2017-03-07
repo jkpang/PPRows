@@ -28,12 +28,9 @@
 @protocol PPTableCellViewDelegate <NSObject>
 
 /**
- 回调每个cell计算的文件信息
-
- @param fileNumber 参与计算的文件数量
- @param codeRows 参与计算文件的总代码行数
+ 每个cell内文件计算完成的回调
  */
-- (void)countFinishedWithFileNumber:(NSUInteger)fileNumber codeRows:(NSUInteger)codeRows;
+- (void)countFinished;
 
 @end
 
