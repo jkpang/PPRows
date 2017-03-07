@@ -704,9 +704,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-xe-XqZ">
-                                        <rect key="frame" x="12" y="14" width="43" height="17"/>
-                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="Total: " id="EfS-zW-9JD">
-                                            <font key="font" metaFont="systemMedium" size="13"/>
+                                        <rect key="frame" x="12" y="14" width="67" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="TotalFiles: " id="EfS-zW-9JD">
+                                            <font key="font" metaFont="systemMedium" size="12"/>
+                                            <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-5g-YEd">
+                                        <rect key="frame" x="75" y="14" width="71" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="TotalRows: " id="ci5-iy-QVP">
+                                            <font key="font" metaFont="systemMedium" size="12"/>
                                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -714,7 +722,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="CLt-xe-XqZ" secondAttribute="bottom" constant="14" id="CvN-O3-uMD"/>
+                                    <constraint firstItem="7uE-5g-YEd" firstAttribute="top" secondItem="CLt-xe-XqZ" secondAttribute="top" id="JQq-xv-W0Y"/>
                                     <constraint firstItem="CLt-xe-XqZ" firstAttribute="leading" secondItem="IeH-oR-ePf" secondAttribute="leading" constant="14" id="TYu-yi-TNl"/>
+                                    <constraint firstItem="7uE-5g-YEd" firstAttribute="leading" secondItem="CLt-xe-XqZ" secondAttribute="trailing" id="rcv-j2-bAB"/>
                                 </constraints>
                             </customView>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="46" horizontalPageScroll="10" verticalLineScroll="46" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-dT-sTM">
@@ -849,12 +859,13 @@
                     <connections>
                         <outlet property="dragDropView" destination="IeH-oR-ePf" id="k4c-9h-syi"/>
                         <outlet property="tableView" destination="joD-JN-IiP" id="QVQ-po-E9o"/>
-                        <outlet property="totalResult" destination="CLt-xe-XqZ" id="phw-Zp-o3Y"/>
+                        <outlet property="totalFiles" destination="CLt-xe-XqZ" id="kBk-fr-HLl"/>
+                        <outlet property="totalRows" destination="7uE-5g-YEd" id="WOl-Mm-TrO"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="250"/>
+            <point key="canvasLocation" x="623" y="250"/>
         </scene>
     </scenes>
     <resources>

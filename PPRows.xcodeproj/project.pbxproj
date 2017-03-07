@@ -18,6 +18,7 @@
 		35E1E0241E6D6EE1006C98F4 /* PPRowsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0211E6D6EE1006C98F4 /* PPRowsEngine.m */; };
 		35E1E0321E6D892D006C98F4 /* NSAttributedString+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0311E6D892D006C98F4 /* NSAttributedString+PPRows.m */; };
 		35E1E0351E6D8950006C98F4 /* NSColor+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */; };
+		35EE5F941E6ECD57007B8FBB /* PPMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EE5F931E6ECD56007B8FBB /* PPMainModel.m */; };
 		47C6F1F92D4139FCFF6A64A2 /* libPods-PPRows.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9DD67EA97F6F33D5AE5A3A /* libPods-PPRows.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		35E1E0331E6D8950006C98F4 /* NSColor+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+PPRows.h"; sourceTree = "<group>"; };
 		35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+PPRows.m"; sourceTree = "<group>"; };
 		35EE5F8F1E6EAB88007B8FBB /* PPRowsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRowsProtocol.h; sourceTree = "<group>"; };
+		35EE5F921E6ECD56007B8FBB /* PPMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainModel.h; sourceTree = "<group>"; };
+		35EE5F931E6ECD56007B8FBB /* PPMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMainModel.m; sourceTree = "<group>"; };
 		4896E5ACB9D2D6217E4E46E8 /* Pods-PPRows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRows.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPRows/Pods-PPRows.release.xcconfig"; sourceTree = "<group>"; };
 		5E9DD67EA97F6F33D5AE5A3A /* libPods-PPRows.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPRows.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1758B54F144E602FCC4B6E /* Pods-PPRows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPRows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPRows/Pods-PPRows.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 		350DE0841E6AD6F900C5818E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35EE5F921E6ECD56007B8FBB /* PPMainModel.h */,
+				35EE5F931E6ECD56007B8FBB /* PPMainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				22F0E9F91E6A796B00FF7F7D /* main.m in Sources */,
 				35E1E0321E6D892D006C98F4 /* NSAttributedString+PPRows.m in Sources */,
 				35E1E0351E6D8950006C98F4 /* NSColor+PPRows.m in Sources */,
+				35EE5F941E6ECD57007B8FBB /* PPMainModel.m in Sources */,
 				350DE0891E6AD6F900C5818E /* PPWindowController.m in Sources */,
 				22F0EA1E1E6BC61300FF7F7D /* PPDragDropView.m in Sources */,
 				35E1E0241E6D6EE1006C98F4 /* PPRowsEngine.m in Sources */,

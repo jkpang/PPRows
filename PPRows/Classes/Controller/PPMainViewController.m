@@ -10,6 +10,7 @@
 #import "PPTableCellView.h"
 #import "PPDragDropView.h"
 #import "NSAttributedString+PPRows.h"
+#import "PPMainModel.h"
 #import <PPCounter.h>
 
 @interface PPMainViewController () <NSTableViewDataSource, NSTableViewDelegate, PPDragDropViewDelegate ,PPTableCellViewDelegate>
@@ -17,13 +18,17 @@
 @property (weak) IBOutlet NSTableView *tableView;
 /** 拖拽文件检测View*/
 @property (weak) IBOutlet PPDragDropView *dragDropView;
-/** 当计算完所有文件后的汇总结果*/
-@property (weak) IBOutlet NSTextField *totalResult;
+/** 参与计算的所有文件*/
+@property (weak) IBOutlet NSTextField *totalFiles;
+/** 所有代码行数*/
+@property (weak) IBOutlet NSTextField *totalRows;
 /** 列表数据源*/
-@property (nonatomic, copy) NSArray *dataSource;
+@property (nonatomic, strong) NSMutableArray<PPMainModel *> *dataSource;
 @end
 
-@implementation PPMainViewController
+@implementation PPMainViewController {
+    dispatch_group_t _group;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -34,19 +39,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _group = dispatch_group_create();
     self.dragDropView.delegate = self;
+    
+    __block NSUInteger fileNumber;
+    __block NSUInteger codeRows;
+    dispatch_group_notify(_group, dispatch_get_main_queue(), ^{
+        for (PPMainModel *model in self.dataSource) {
+            fileNumber += model.fileNumber;
+            codeRows += model.codeRows;
+        }
+        [self countFinishedWithFileNumber:fileNumber codeRows:codeRows];
+    });
+    
 }
 
 #pragma mark - NSTableViewDataSource, NSTableViewDelegate
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return _dataSource.count;
+    return self.dataSource.count;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     PPTableCellView *cell = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
-    [cell fillCellWithFilePath:self.dataSource[row] index:row+1];
+    [cell fillCellWithModel:self.dataSource[row] index:row+1 dispatchGroup:_group];
     cell.delegate = self;
     return cell;
 }
@@ -54,7 +71,12 @@
 #pragma mark - PPDragDropViewDelegate
 - (void)dragDropFilePathList:(NSArray<NSString *> *)filePathList
 {
-    _dataSource = filePathList;
+    for (NSString *filePath in filePathList) {
+        PPMainModel *model = [PPMainModel new];
+        model.filePath = filePath;
+        [self.dataSource addObject:model];
+    }
+    
     [self.tableView reloadData];
 }
 
@@ -62,16 +84,33 @@
 - (void)countFinishedWithFileNumber:(NSUInteger)fileNumber codeRows:(NSUInteger)codeRows
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
-        self.totalResult.stringValue = [NSString stringWithFormat:@"CodeFiles: %ld",(NSInteger)number];
+        self.totalFiles.stringValue = NSStringFormat(@"共%ld个文件",(NSInteger)number);
     } completion:^{
         
-        NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalResult.stringValue
+        NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalFiles.stringValue
                                                                      rangeText:NSStringFormat(@"%ld",fileNumber)
                                                                  rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                 rangeTextColor:fileNumber?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
-        self.totalResult.attributedStringValue = string;
+        self.totalFiles.attributedStringValue = string;
+    }];
+    
+    [[PPCounterEngine counterEngine] fromNumber:codeRows toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
+        self.totalRows.stringValue = NSStringFormat(@"%ld行代码",(NSInteger)number);
+    } completion:^{
+        
+        NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalRows.stringValue
+                                                                     rangeText:NSStringFormat(@"%ld",codeRows)
+                                                                 rangeTextFont:[NSFont boldSystemFontOfSize:12]
+                                                                rangeTextColor:codeRows?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
+        self.totalRows.attributedStringValue = string;
     }];
 }
 
+- (NSMutableArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [[NSMutableArray alloc] init];
+    }
+    return _dataSource;
+}
 @end
 

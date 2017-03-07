@@ -9,6 +9,7 @@
 #import "PPTableCellView.h"
 #import "PPRowsEngine.h"
 #import "NSAttributedString+PPRows.h"
+#import "PPMainModel.h"
 #import <PPCounter.h>
 
 @interface PPTableCellView ()
@@ -23,6 +24,8 @@
 /** 计算完成时显示的图片*/
 @property (weak) IBOutlet NSImageView *finishedImageView;
 
+
+
 @end
 
 @implementation PPTableCellView
@@ -36,9 +39,9 @@
     // Drawing code here.
 }
 
-- (void)fillCellWithFilePath:(NSString *)path index:(NSUInteger)index
+- (void)fillCellWithModel:(PPMainModel *)model index:(NSUInteger)index dispatchGroup:(dispatch_group_t)dispatchGroup
 {
-    NSArray *folderArray = [path componentsSeparatedByString:@"/"];
+    NSArray *folderArray = [model.filePath componentsSeparatedByString:@"/"];
     self.finishedImageView.hidden = YES;
     self.fileName.stringValue = [NSString stringWithFormat:@"%ld. %@",index, folderArray.lastObject];
     self.fileNumber.stringValue = @"计算中...";
@@ -47,22 +50,27 @@
     self.fileNumber.textColor = [NSColor gridColor];
     self.codeRows.textColor = [NSColor gridColor];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [[PPRowsEngine rowsEngine] computeWithFilePath:path completion:^(NSUInteger codeFileNumber, NSUInteger codeRows) {
-            
+    dispatch_group_async(dispatchGroup, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
+        [[PPRowsEngine rowsEngine] computeWithFilePath:model.filePath completion:^(NSUInteger codeFileNumber, NSUInteger codeRows) {
+            model.fileNumber = codeFileNumber;
+            model.codeRows = codeRows;
             // 文本信息处理完成的回调
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self countCodeRows:codeRows];
                 [self countCodeFiles:codeFileNumber];
-                if (_delegate && [_delegate respondsToSelector:@selector(countFinishedWithFileNumber:codeRows:)]) {
-                    [_delegate countFinishedWithFileNumber:codeFileNumber codeRows:codeRows];
-                }
+//                if (_delegate && [_delegate respondsToSelector:@selector(countFinishedWithFileNumber:codeRows:)]) {
+//                    [_delegate countFinishedWithFileNumber:codeFileNumber codeRows:codeRows];
+//                }
             });
             
         } error:^(NSString *errorInfo) {
             NSLog(@"%@",errorInfo);
         }];
     });
+    
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        
+//    });
 }
 
 - (void)countCodeFiles:(NSUInteger)fileNumber

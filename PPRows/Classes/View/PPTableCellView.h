@@ -8,9 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class PPMainModel;
 @interface PPTableCellView : NSTableCellView
 
-- (void)fillCellWithFilePath:(NSString *)path index:(NSUInteger)index;
+- (void)fillCellWithModel:(PPMainModel *)model index:(NSUInteger)index dispatchGroup:(dispatch_group_t)dispatchGroup;
 
 @property (nonatomic, weak) id<PPTableCellViewDelegate> delegate;
 @end
