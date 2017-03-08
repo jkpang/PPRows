@@ -90,13 +90,20 @@ typedef CGFloat (*PPCurrentBufferFunction)(CGFloat);
     // 开始前清空定时器
     [self cleanTimer];
     
+    // 如果开始数字与结束数字相等
+    if (starNumer == endNumber) {
+        currentNumber ? currentNumber(endNumber) : nil ;
+        completion ? completion(endNumber) : nil;
+        return;
+    }
+    
     // 初始化相关变量
     _starNumber = starNumer;
     _endNumber = endNumber;
     _durationTime = durationTime;
     
     // 设置缓冲动画类型
-    [self setanimationOptions:animationOptions];
+    [self setAnimationOptions:animationOptions];
     
     // 设置block回调函数
     currentNumber ? _currentNumber = currentNumber : nil ;
@@ -131,13 +138,13 @@ typedef CGFloat (*PPCurrentBufferFunction)(CGFloat);
     if (_progressTime >= _durationTime) {
         [self cleanTimer];
         _currentNumber ? _currentNumber(_endNumber) : nil ;
-        _completion ? _completion() : nil ;
+        _completion ? _completion(_endNumber) : nil ;
         return;
     }
     _currentNumber ? _currentNumber([self computeNumber]) : nil ;
 }
 
-- (void)setanimationOptions:(PPCounterAnimationOptions)animationOptions
+- (void)setAnimationOptions:(PPCounterAnimationOptions)animationOptions
 {
     switch (animationOptions) {
         case PPCounterAnimationOptionCurveEaseInOut:

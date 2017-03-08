@@ -73,7 +73,7 @@
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
         self.fileNumber.stringValue = NSStringFormat(@"CodeFiles: %ld",(NSInteger)number);
-    } completion:^{
+    } completion:^(CGFloat endNumber) {
         
         [self countFinished];
         
@@ -88,7 +88,7 @@
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
         self.codeRows.stringValue = NSStringFormat(@"CodeRows: %ld",(NSInteger)number);
-    } completion:^{
+    } completion:^(CGFloat endNumber) {
         
         [self countFinished];
         

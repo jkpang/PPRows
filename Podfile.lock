@@ -1,12 +1,21 @@
 PODS:
-  - PPCounter (0.5.0)
+  - PPCounter (0.5.1)
 
 DEPENDENCIES:
-  - PPCounter
+  - PPCounter (from `https://github.com/jkpang/PPCounter.git`)
+
+EXTERNAL SOURCES:
+  PPCounter:
+    :git: https://github.com/jkpang/PPCounter.git
+
+CHECKOUT OPTIONS:
+  PPCounter:
+    :commit: 8371ea4cbb32937417b1719666ad240f2a3a7970
+    :git: https://github.com/jkpang/PPCounter.git
 
 SPEC CHECKSUMS:
-  PPCounter: 07931f989df5014b35525fbb239ed8f5c147ee3c
+  PPCounter: e2ac8e7e4683c99e34b5d5d5b540cfb8eca1038f
 
-PODFILE CHECKSUM: 2ab2b20efa5d904fde42949dd8a8c0458a92c9cb
+PODFILE CHECKSUM: 1a2e94e9655ad5bcc1b5c565ef9d3cafb231abb9
 
 COCOAPODS: 1.2.0

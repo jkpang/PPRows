@@ -29,13 +29,13 @@
 
 extern NSString *const kPPCounterAnimationOptions;
 
-typedef void(^PPCompletionBlock)(void);
+typedef void(^PPCompletionBlock)(CGFloat endNumber);
 
-typedef void(^PPCurrentNumberBlock)(CGFloat number);
+typedef void(^PPCurrentNumberBlock)(CGFloat currentNumber);
 
-typedef NSString *(^PPFormatBlock)(CGFloat number);
+typedef NSString *(^PPFormatBlock)(CGFloat currentNumber);
 
-typedef NSAttributedString *(^PPAttributedFormatBlock)(CGFloat number);
+typedef NSAttributedString *(^PPAttributedFormatBlock)(CGFloat currentNumber);
 
 typedef NS_ENUM(NSUInteger, PPCounterAnimationOptions) {
     /** 由慢到快,再由快到慢*/
