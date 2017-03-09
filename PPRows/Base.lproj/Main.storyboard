@@ -670,7 +670,7 @@
                         <rect key="contentRect" x="196" y="240" width="350" height="350"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="350" height="350"/>
-                        <value key="maxSize" type="size" width="350" height="350"/>
+                        <value key="maxSize" type="size" width="450" height="350"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -685,7 +685,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="PPMainViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="350"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUL-HF-Spq">
@@ -712,19 +712,35 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-5g-YEd">
-                                        <rect key="frame" x="75" y="14" width="71" height="16"/>
+                                        <rect key="frame" x="76" y="14" width="71" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="TotalRows: " id="ci5-iy-QVP">
                                             <font key="font" metaFont="systemMedium" size="12"/>
                                             <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="rBu-ZG-AYz">
+                                        <rect key="frame" x="292" y="7" width="53" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9aJ-6C-umG"/>
+                                            <constraint firstAttribute="width" constant="53" id="nRu-Um-Eus"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="setting" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2YD-BW-F6B">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showSetting:" target="XfG-lQ-9wD" id="YT2-kV-WTR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="CLt-xe-XqZ" secondAttribute="bottom" constant="14" id="CvN-O3-uMD"/>
                                     <constraint firstItem="7uE-5g-YEd" firstAttribute="top" secondItem="CLt-xe-XqZ" secondAttribute="top" id="JQq-xv-W0Y"/>
                                     <constraint firstItem="CLt-xe-XqZ" firstAttribute="leading" secondItem="IeH-oR-ePf" secondAttribute="leading" constant="14" id="TYu-yi-TNl"/>
-                                    <constraint firstItem="7uE-5g-YEd" firstAttribute="leading" secondItem="CLt-xe-XqZ" secondAttribute="trailing" id="rcv-j2-bAB"/>
+                                    <constraint firstAttribute="trailing" secondItem="rBu-ZG-AYz" secondAttribute="trailing" constant="5" id="Vr9-Wl-fgX"/>
+                                    <constraint firstAttribute="bottom" secondItem="rBu-ZG-AYz" secondAttribute="bottom" constant="7" id="dlc-9D-jDL"/>
+                                    <constraint firstItem="7uE-5g-YEd" firstAttribute="leading" secondItem="CLt-xe-XqZ" secondAttribute="trailing" constant="1" id="rcv-j2-bAB"/>
                                 </constraints>
                             </customView>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="46" horizontalPageScroll="10" verticalLineScroll="46" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="dark" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-dT-sTM">
@@ -845,15 +861,15 @@
                             <constraint firstItem="DOz-dT-sTM" firstAttribute="top" secondItem="YAP-zv-S1U" secondAttribute="bottom" constant="5" id="5Ns-Og-lZW"/>
                             <constraint firstItem="nUL-HF-Spq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ET1-AH-IOr"/>
                             <constraint firstItem="YAP-zv-S1U" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="FkD-uz-Vh6"/>
-                            <constraint firstAttribute="trailing" secondItem="DOz-dT-sTM" secondAttribute="trailing" id="KBt-Oi-Q5J"/>
+                            <constraint firstAttribute="trailing" secondItem="DOz-dT-sTM" secondAttribute="trailing" constant="100" id="KBt-Oi-Q5J"/>
                             <constraint firstItem="IeH-oR-ePf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="MIL-Jw-NG4"/>
                             <constraint firstItem="DOz-dT-sTM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="OEr-ye-0KZ"/>
                             <constraint firstAttribute="bottom" secondItem="nUL-HF-Spq" secondAttribute="bottom" id="Zpb-zC-NA9"/>
                             <constraint firstAttribute="bottom" secondItem="DOz-dT-sTM" secondAttribute="bottom" constant="40" id="cSN-sU-WG7"/>
-                            <constraint firstAttribute="trailing" secondItem="nUL-HF-Spq" secondAttribute="trailing" id="co6-q5-isl"/>
-                            <constraint firstItem="YAP-zv-S1U" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fdF-SC-mq9"/>
+                            <constraint firstAttribute="trailing" secondItem="nUL-HF-Spq" secondAttribute="trailing" constant="100" id="co6-q5-isl"/>
+                            <constraint firstItem="YAP-zv-S1U" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="-50" id="fdF-SC-mq9"/>
                             <constraint firstItem="IeH-oR-ePf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fdU-co-uJ6"/>
-                            <constraint firstAttribute="trailing" secondItem="IeH-oR-ePf" secondAttribute="trailing" id="kGs-1f-EEW"/>
+                            <constraint firstAttribute="trailing" secondItem="IeH-oR-ePf" secondAttribute="trailing" constant="100" id="kGs-1f-EEW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -869,8 +885,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="320" height="320"/>
+        <image name="background" width="350" height="350"/>
         <image name="finishe" width="32" height="32"/>
         <image name="folder" width="48" height="48"/>
+        <image name="setting" width="47" height="32"/>
     </resources>
 </document>

@@ -34,13 +34,15 @@
     self.totalRows.stringValue = @"";
     // 设置垂直滚动条的样式
     self.tableView.enclosingScrollView.scrollerStyle = NSScrollerStyleOverlay;
+    // 设置cell点击选择状态为None
     self.tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
+    
+    self.dragDropView.delegate = self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.dragDropView.delegate = self;
 }
 
 #pragma mark - NSTableViewDataSource, NSTableViewDelegate
@@ -61,6 +63,7 @@
 - (void)dragDropFilePathList:(NSArray<NSString *> *)filePathList
 {
     [self.dataSource removeAllObjects];
+
     self.totalFiles.stringValue = @"计算中...";
     self.totalRows.stringValue = @"";
     
@@ -70,6 +73,7 @@
         model.filePath = filePath;
         [self.dataSource addObject:model];
     }
+    
     [self.tableView reloadData];
 }
 
@@ -94,7 +98,7 @@
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.totalFiles.stringValue = NSStringFormat(@"共%ld个文件",(NSInteger)number);
-        [self.totalFiles updateConstraints];
+
     } completion:^(CGFloat endNumber) {
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalFiles.stringValue
                                                                      rangeText:NSStringFormat(@"%ld",fileNumber)
@@ -108,7 +112,7 @@
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.totalRows.stringValue = NSStringFormat(@"%ld行代码",(NSInteger)number);
-        [self.totalRows updateConstraints];
+
     } completion:^(CGFloat endNumber) {
         
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalRows.stringValue
@@ -119,6 +123,19 @@
         [self.totalRows updateConstraints];
     }];
 }
+
+
+#pragma mark - Show Setting
+
+- (IBAction)showSetting:(NSButton *)sender
+{
+    NSWindow *window = [NSApplication sharedApplication].windows.firstObject;
+    CGRect frame = window.frame;
+    
+    [window setFrame:CGRectMake(frame.origin.x, frame.origin.y+100, 350, 100) display:YES animate:YES];
+    PPLog(@"设置");
+}
+
 
 
 #pragma mark - lazy

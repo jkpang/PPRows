@@ -57,20 +57,6 @@
       "idiom" : "mac",
       "filename" : "icon_512x512@2x.png",
       "scale" : "2x"
-    },
-    {
-      "size" : "16x16",
-      "idiom" : "mac",
-      "filename" : "icon_32x32.png",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "size" : "256x256",
-      "idiom" : "mac",
-      "filename" : "icon_512x512.png",
-      "unassigned" : true,
-      "scale" : "2x"
     }
   ],
   "info" : {
