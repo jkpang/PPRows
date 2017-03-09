@@ -20,6 +20,7 @@
 #define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
 
 #import "NSColor+PPRows.h"
+#import "NSView+PPRows.h"
 #import "PPRowsProtocol.h"
 
 #endif /* PPRowsPrefixHeader_pch */

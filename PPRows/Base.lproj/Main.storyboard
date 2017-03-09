@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
@@ -670,7 +670,7 @@
                         <rect key="contentRect" x="196" y="240" width="350" height="350"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="350" height="350"/>
-                        <value key="maxSize" type="size" width="450" height="350"/>
+                        <value key="maxSize" type="size" width="350" height="350"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -685,11 +685,14 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="PPMainViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="350"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUL-HF-Spq">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Q4f-nw-EXs"/>
+                                </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="background" id="Ona-AW-LGP"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-zv-S1U">
@@ -737,6 +740,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="CLt-xe-XqZ" secondAttribute="bottom" constant="14" id="CvN-O3-uMD"/>
                                     <constraint firstItem="7uE-5g-YEd" firstAttribute="top" secondItem="CLt-xe-XqZ" secondAttribute="top" id="JQq-xv-W0Y"/>
+                                    <constraint firstAttribute="width" constant="350" id="M4i-MN-W8L"/>
                                     <constraint firstItem="CLt-xe-XqZ" firstAttribute="leading" secondItem="IeH-oR-ePf" secondAttribute="leading" constant="14" id="TYu-yi-TNl"/>
                                     <constraint firstAttribute="trailing" secondItem="rBu-ZG-AYz" secondAttribute="trailing" constant="5" id="Vr9-Wl-fgX"/>
                                     <constraint firstAttribute="bottom" secondItem="rBu-ZG-AYz" secondAttribute="bottom" constant="7" id="dlc-9D-jDL"/>
@@ -845,6 +849,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="wHo-TV-eH6"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="8xk-C9-VUA">
                                     <rect key="frame" x="-100" y="-100" width="335" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -854,6 +861,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <tokenField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6u-YS-eSv">
+                                <rect key="frame" x="358" y="192" width="134" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="pGX-WG-cHK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </tokenFieldCell>
+                            </tokenField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="nUL-HF-Spq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="27c-c3-A4b"/>
@@ -861,15 +877,12 @@
                             <constraint firstItem="DOz-dT-sTM" firstAttribute="top" secondItem="YAP-zv-S1U" secondAttribute="bottom" constant="5" id="5Ns-Og-lZW"/>
                             <constraint firstItem="nUL-HF-Spq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ET1-AH-IOr"/>
                             <constraint firstItem="YAP-zv-S1U" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="FkD-uz-Vh6"/>
-                            <constraint firstAttribute="trailing" secondItem="DOz-dT-sTM" secondAttribute="trailing" constant="100" id="KBt-Oi-Q5J"/>
                             <constraint firstItem="IeH-oR-ePf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="MIL-Jw-NG4"/>
                             <constraint firstItem="DOz-dT-sTM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="OEr-ye-0KZ"/>
+                            <constraint firstItem="YAP-zv-S1U" firstAttribute="centerX" secondItem="nUL-HF-Spq" secondAttribute="centerX" id="ZeN-uJ-N4g"/>
                             <constraint firstAttribute="bottom" secondItem="nUL-HF-Spq" secondAttribute="bottom" id="Zpb-zC-NA9"/>
                             <constraint firstAttribute="bottom" secondItem="DOz-dT-sTM" secondAttribute="bottom" constant="40" id="cSN-sU-WG7"/>
-                            <constraint firstAttribute="trailing" secondItem="nUL-HF-Spq" secondAttribute="trailing" constant="100" id="co6-q5-isl"/>
-                            <constraint firstItem="YAP-zv-S1U" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="-50" id="fdF-SC-mq9"/>
                             <constraint firstItem="IeH-oR-ePf" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fdU-co-uJ6"/>
-                            <constraint firstAttribute="trailing" secondItem="IeH-oR-ePf" secondAttribute="trailing" constant="100" id="kGs-1f-EEW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -881,13 +894,13 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="250"/>
+            <point key="canvasLocation" x="616" y="250"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="350" height="350"/>
-        <image name="finishe" width="32" height="32"/>
-        <image name="folder" width="48" height="48"/>
-        <image name="setting" width="47" height="32"/>
+        <image name="finishe" width="24" height="24"/>
+        <image name="folder" width="32" height="32"/>
+        <image name="setting" width="35.5" height="24"/>
     </resources>
 </document>

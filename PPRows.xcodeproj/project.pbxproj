@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225CADBD1E719C5500173BE1 /* NSView+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CADBC1E719C5500173BE1 /* NSView+PPRows.m */; };
 		22F0E9F91E6A796B00FF7F7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0E9F81E6A796B00FF7F7D /* main.m */; };
 		22F0E9FE1E6A796B00FF7F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */; };
 		22F0EA011E6A796B00FF7F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FF1E6A796B00FF7F7D /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225CADBB1E719C5500173BE1 /* NSView+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+PPRows.h"; sourceTree = "<group>"; };
+		225CADBC1E719C5500173BE1 /* NSView+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+PPRows.m"; sourceTree = "<group>"; };
 		22F0E9F11E6A796B00FF7F7D /* PPRows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPRows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F0E9F81E6A796B00FF7F7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 		35E1E02F1E6D892D006C98F4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				225CADBB1E719C5500173BE1 /* NSView+PPRows.h */,
+				225CADBC1E719C5500173BE1 /* NSView+PPRows.m */,
 				35E1E0331E6D8950006C98F4 /* NSColor+PPRows.h */,
 				35E1E0341E6D8950006C98F4 /* NSColor+PPRows.m */,
 				35E1E0301E6D892D006C98F4 /* NSAttributedString+PPRows.h */,
@@ -328,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */,
+				225CADBD1E719C5500173BE1 /* NSView+PPRows.m in Sources */,
 				350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */,
 				350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */,
 				22F0E9F91E6A796B00FF7F7D /* main.m in Sources */,

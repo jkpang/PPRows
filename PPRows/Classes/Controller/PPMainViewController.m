@@ -38,6 +38,11 @@
     self.tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
     
     self.dragDropView.delegate = self;
+    
+    NSWindow *window = [NSApplication sharedApplication].windows.firstObject;
+    CGRect frame = window.frame;
+    frame.size.width = 350;
+    [window setFrame:frame display:YES];
 }
 
 - (void)viewDidLoad {
@@ -131,12 +136,13 @@
 {
     NSWindow *window = [NSApplication sharedApplication].windows.firstObject;
     CGRect frame = window.frame;
-    
-    [window setFrame:CGRectMake(frame.origin.x, frame.origin.y+100, 350, 100) display:YES animate:YES];
-    PPLog(@"设置");
+    if (frame.size.width == 500) {
+        frame.size.width = 350;
+    } else {
+        frame.size.width = 500;
+    }
+    [window setFrame:frame display:YES animate:YES];
 }
-
-
 
 #pragma mark - lazy
 
