@@ -53,7 +53,6 @@
     // 1.文件夹
     if (isFolder) {
         NSUInteger codeRows = 0;
-        
         NSArray *subFileArray = [manager contentsOfDirectoryAtPath:path error:nil];
         
         for (NSString *subFileName in subFileArray) {

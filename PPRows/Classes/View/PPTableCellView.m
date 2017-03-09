@@ -52,21 +52,20 @@
         
         [[PPRowsEngine rowsEngine] computeWithFilePath:model.filePath completion:^(NSUInteger codeFileNumber, NSUInteger codeRows) {
             // 文本信息处理完成的回调
-            
             model.fileNumber = codeFileNumber;
             model.codeRows   = codeRows;
             model.countFinished = YES;
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                [self countCodeRows:codeRows];
                 [self countCodeFiles:codeFileNumber];
+                [self countCodeRows:codeRows];
                 
                 if (_delegate && [_delegate respondsToSelector:@selector(cellCountFinished)]) {
                     [_delegate cellCountFinished];
                 }
             });
-            
+
         } error:^(NSString *errorInfo) {
             PPLog(@"%@",errorInfo);
         }];
@@ -78,30 +77,31 @@
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.fileNumber.stringValue = NSStringFormat(@"CodeFiles: %ld",(NSInteger)number);
+        [self.fileNumber updateConstraints];
     } completion:^(CGFloat endNumber) {
-        
-        [self countFinished];
         
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.fileNumber.stringValue
                                                                     rangeText:NSStringFormat(@"%ld",fileNumber)
                                                                 rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                rangeTextColor:fileNumber?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.fileNumber.attributedStringValue = string;
+        [self.fileNumber updateConstraints];
     }];
 }
 - (void)countCodeRows:(NSUInteger)codeRows
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.codeRows.stringValue = NSStringFormat(@"CodeRows: %ld",(NSInteger)number);
+        [self.codeRows updateConstraints];
     } completion:^(CGFloat endNumber) {
         
         [self countFinished];
-        
         NSAttributedString *attributedString = [NSAttributedString pp_attributesWithText:self.codeRows.stringValue
                                                                                rangeText:NSStringFormat(@"%ld",codeRows)
                                                                            rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                           rangeTextColor:codeRows?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.codeRows.attributedStringValue = attributedString;
+        [self.codeRows updateConstraints];
     }];
 }
 

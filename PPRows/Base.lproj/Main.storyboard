@@ -752,7 +752,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="PPTableCell" id="bQQ-7g-E3V" customClass="PPTableCellView">
+                                                        <tableCellView id="bQQ-7g-E3V" customClass="PPTableCellView">
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>

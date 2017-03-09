@@ -34,6 +34,7 @@
     self.totalRows.stringValue = @"";
     // 设置垂直滚动条的样式
     self.tableView.enclosingScrollView.scrollerStyle = NSScrollerStyleOverlay;
+    self.tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
 }
 
 - (void)viewDidLoad {
@@ -56,7 +57,7 @@
     return cell;
 }
 
-#pragma mark - PPDragDropViewDelegate
+#pragma mark - PPDragDropViewDelegate 获取文件路径数据源数组
 - (void)dragDropFilePathList:(NSArray<NSString *> *)filePathList
 {
     [self.dataSource removeAllObjects];
@@ -69,7 +70,6 @@
         model.filePath = filePath;
         [self.dataSource addObject:model];
     }
-    
     [self.tableView reloadData];
 }
 
@@ -80,31 +80,35 @@
     NSUInteger fileNumber = 0;
     NSUInteger codeRows = 0;
     for (PPMainModel *model in self.dataSource) {
-        if (!model.isCountFinished) {return;}
+        if (!model.countFinished) {return;}
         fileNumber += model.fileNumber;
         codeRows += model.codeRows;
     }
     
     [self countCodeFiles:fileNumber];
     [self countCodeRows:codeRows];
+    
 }
 
 - (void)countCodeFiles:(NSUInteger)fileNumber
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.totalFiles.stringValue = NSStringFormat(@"共%ld个文件",(NSInteger)number);
+        [self.totalFiles updateConstraints];
     } completion:^(CGFloat endNumber) {
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalFiles.stringValue
                                                                      rangeText:NSStringFormat(@"%ld",fileNumber)
                                                                  rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                 rangeTextColor:fileNumber?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.totalFiles.attributedStringValue = string;
+        [self.totalFiles updateConstraints];
     }];
 }
 - (void)countCodeRows:(NSUInteger)codeRows
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.totalRows.stringValue = NSStringFormat(@"%ld行代码",(NSInteger)number);
+        [self.totalRows updateConstraints];
     } completion:^(CGFloat endNumber) {
         
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalRows.stringValue
@@ -112,6 +116,7 @@
                                                                  rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                 rangeTextColor:codeRows?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.totalRows.attributedStringValue = string;
+        [self.totalRows updateConstraints];
     }];
 }
 
