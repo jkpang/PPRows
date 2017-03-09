@@ -1,6 +1,6 @@
 {
   "name": "PPCounter",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "platforms": {
     "osx": "10.10",
     "ios": "7.0"
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/jkpang/PPCounter.git",
-    "tag": "0.5.1"
+    "tag": "0.6.0"
   },
   "source_files": "PPCounter/PPCounter.h",
   "ios": {

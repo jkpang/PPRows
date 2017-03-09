@@ -74,7 +74,7 @@
 }
 
 #pragma mark - PPTableCellViewDelegate
-- (void)countFinished
+- (void)cellCountFinished
 {
     // 每处理完一个cell的文件, 都计算一次文件数量与代码量
     NSUInteger fileNumber = 0;
@@ -91,7 +91,7 @@
 
 - (void)countCodeFiles:(NSUInteger)fileNumber
 {
-    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
+    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.totalFiles.stringValue = NSStringFormat(@"共%ld个文件",(NSInteger)number);
     } completion:^(CGFloat endNumber) {
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalFiles.stringValue
@@ -103,7 +103,7 @@
 }
 - (void)countCodeRows:(NSUInteger)codeRows
 {
-    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
+    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.totalRows.stringValue = NSStringFormat(@"%ld行代码",(NSInteger)number);
     } completion:^(CGFloat endNumber) {
         

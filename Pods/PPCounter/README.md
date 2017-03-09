@@ -1,12 +1,13 @@
 ![](https://github.com/jkpang/PPCounter/blob/master/Picture/PPCounter.png)
 
-![](https://img.shields.io/badge/platform-iOS | macOS-red.svg)   ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/pod-v0.5.1-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-%40CoderPang-yellow.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
+![](https://img.shields.io/badge/platform-iOS | macOS-red.svg)   ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/pod-v0.6.0-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-%40CoderPang-yellow.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
 
 iOS与macOS中一款优雅的数字/金额增减动效控件
 
-![image](https://github.com/jkpang/PPCounter/blob/master/Picture/PPCounter.gif)
+![iPhone](https://github.com/jkpang/PPCounter/blob/master/Picture/PPCounter.gif)
+![Mac](https://github.com/jkpang/PPCounter/blob/master/Picture/Mac.gif)
 
-* 支持iOS/macOS双平台(pods版本v0.5.0)
+* 支持iOS/macOS双平台(pods版本v0.5.0起支持)
 * 支持UILable/UIButton/自定义文本 控件的数字加减动画;
 * 支持一般文本属性以及富文本属性的字体显示;
 * 支持四种时间曲线函数动画:由慢到快再到慢、由慢到特别快、由快到慢、匀速;
@@ -111,6 +112,7 @@ then
 ###你的star是我持续更新的动力!
 ===
 ##CocoaPods更新日志
+* 2017.03.07(tag:0.6.0)--Mac下的定时器由 NSTimer --> dispatch_source_t;
 * 2017.03.07(tag:0.5.0)--支持iOS/MacOS双平台;
 * 2017.01.07(tag:0.2.0)--优化代码命名规范;
 * 2016.10.23(tag:0.1.1)--优化代码结构与调用API方法;

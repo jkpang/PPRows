@@ -38,6 +38,7 @@
 
 - (void)fillCellWithModel:(PPMainModel *)model index:(NSUInteger)index
 {
+    
     NSArray *fileList = [model.filePath componentsSeparatedByString:@"/"];
     self.fileName.stringValue = NSStringFormat(@"%ld. %@",index, fileList.lastObject);
     self.finishedImageView.hidden = YES;
@@ -50,20 +51,24 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         [[PPRowsEngine rowsEngine] computeWithFilePath:model.filePath completion:^(NSUInteger codeFileNumber, NSUInteger codeRows) {
+            // 文本信息处理完成的回调
+            
             model.fileNumber = codeFileNumber;
             model.codeRows   = codeRows;
             model.countFinished = YES;
-            // 文本信息处理完成的回调
+            
             dispatch_async(dispatch_get_main_queue(), ^{
+                
                 [self countCodeRows:codeRows];
                 [self countCodeFiles:codeFileNumber];
-                if (_delegate && [_delegate respondsToSelector:@selector(countFinished)]) {
-                    [_delegate countFinished];
+                
+                if (_delegate && [_delegate respondsToSelector:@selector(cellCountFinished)]) {
+                    [_delegate cellCountFinished];
                 }
             });
             
         } error:^(NSString *errorInfo) {
-            NSLog(@"%@",errorInfo);
+            PPLog(@"%@",errorInfo);
         }];
 
     });
@@ -71,7 +76,7 @@
 
 - (void)countCodeFiles:(NSUInteger)fileNumber
 {
-    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
+    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.fileNumber.stringValue = NSStringFormat(@"CodeFiles: %ld",(NSInteger)number);
     } completion:^(CGFloat endNumber) {
         
@@ -86,7 +91,7 @@
 }
 - (void)countCodeRows:(NSUInteger)codeRows
 {
-    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseOut currentNumber:^(CGFloat number) {
+    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
         self.codeRows.stringValue = NSStringFormat(@"CodeRows: %ld",(NSInteger)number);
     } completion:^(CGFloat endNumber) {
         

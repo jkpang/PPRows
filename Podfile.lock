@@ -1,5 +1,5 @@
 PODS:
-  - PPCounter (0.5.1)
+  - PPCounter (0.6.0)
 
 DEPENDENCIES:
   - PPCounter (from `https://github.com/jkpang/PPCounter.git`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PPCounter:
-    :commit: 8371ea4cbb32937417b1719666ad240f2a3a7970
+    :commit: 171948eb76e3cd56e79daf328c88b92aed60d705
     :git: https://github.com/jkpang/PPCounter.git
 
 SPEC CHECKSUMS:
-  PPCounter: e2ac8e7e4683c99e34b5d5d5b540cfb8eca1038f
+  PPCounter: da37c0d8bfeeffe7ef4c331468203e17f2e30fbf
 
 PODFILE CHECKSUM: 1a2e94e9655ad5bcc1b5c565ef9d3cafb231abb9
 

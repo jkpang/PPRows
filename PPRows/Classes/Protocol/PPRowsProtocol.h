@@ -30,7 +30,7 @@
 /**
  每个cell内文件计算完成的回调
  */
-- (void)countFinished;
+- (void)cellCountFinished;
 
 @end
 
