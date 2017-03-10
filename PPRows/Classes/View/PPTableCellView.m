@@ -38,15 +38,19 @@
 
 - (void)fillCellWithModel:(PPMainModel *)model index:(NSUInteger)index
 {
+    // 标记是否为文件夹
+    BOOL isFolder = NO;
+    [[NSFileManager defaultManager] fileExistsAtPath:model.filePath isDirectory:&isFolder];
+    self.fileImageView.image = isFolder?[NSImage imageNamed:@"folder"]:[NSImage imageNamed:@"file"];
     
     NSArray *fileList = [model.filePath componentsSeparatedByString:@"/"];
     self.fileName.stringValue = NSStringFormat(@"%ld. %@",index, fileList.lastObject);
     self.finishedImageView.hidden = YES;
     self.fileNumber.stringValue = @"计算中...";
-    self.codeRows.stringValue = @"";
-    self.fileName.textColor = [NSColor gridColor];
-    self.fileNumber.textColor = [NSColor gridColor];
-    self.codeRows.textColor = [NSColor gridColor];
+    self.codeRows.stringValue   = @"";
+    self.fileName.textColor     = [NSColor gridColor];
+    self.fileNumber.textColor   = [NSColor gridColor];
+    self.codeRows.textColor     = [NSColor gridColor];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -57,10 +61,8 @@
             model.countFinished = YES;
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 [self countCodeFiles:codeFileNumber];
                 [self countCodeRows:codeRows];
-                
                 if (_delegate && [_delegate respondsToSelector:@selector(cellCountFinished)]) {
                     [_delegate cellCountFinished];
                 }
