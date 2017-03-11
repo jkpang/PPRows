@@ -24,6 +24,11 @@
     
 }
 
+- (IBAction)openSourcesAddress:(id)sender
+{
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/jkpang/PPRows"]];
+}
+
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
     // 当点击关闭按钮的时候结束APP进程
     return YES;

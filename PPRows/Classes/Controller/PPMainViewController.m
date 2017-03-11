@@ -135,7 +135,7 @@ NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
 }
 
 #pragma mark - Show Setting
-- (IBAction)showSetting:(NSButton *)sender
+- (IBAction)showSetting:(id)sender
 {
     NSWindow *window = [NSApplication sharedApplication].windows.firstObject;
     CGRect frame = window.frame;
