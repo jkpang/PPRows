@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		225CADBD1E719C5500173BE1 /* NSView+PPRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CADBC1E719C5500173BE1 /* NSView+PPRows.m */; };
+		22B3CAA11E73B8A800412325 /* PPSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CAA01E73B8A800412325 /* PPSettingView.m */; };
 		22F0E9F91E6A796B00FF7F7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0E9F81E6A796B00FF7F7D /* main.m */; };
 		22F0E9FE1E6A796B00FF7F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */; };
 		22F0EA011E6A796B00FF7F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F0E9FF1E6A796B00FF7F7D /* Main.storyboard */; };
@@ -26,7 +27,9 @@
 /* Begin PBXFileReference section */
 		225CADBB1E719C5500173BE1 /* NSView+PPRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+PPRows.h"; sourceTree = "<group>"; };
 		225CADBC1E719C5500173BE1 /* NSView+PPRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+PPRows.m"; sourceTree = "<group>"; };
-		22F0E9F11E6A796B00FF7F7D /* PPRows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = PPRows.app; path = /Users/duoyi/Desktop/GitHub/PPRows/build/Debug/PPRows.app; sourceTree = "<absolute>"; };
+		22B3CA9E1E73B61A00412325 /* PPRows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPRows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B3CA9F1E73B8A800412325 /* PPSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSettingView.h; sourceTree = "<group>"; };
+		22B3CAA01E73B8A800412325 /* PPSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSettingView.m; sourceTree = "<group>"; };
 		22F0E9F81E6A796B00FF7F7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22F0E9FD1E6A796B00FF7F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F0EA001E6A796B00FF7F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		22F0E9F21E6A796B00FF7F7D /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				22B3CA9E1E73B61A00412325 /* PPRows.app */,
 			);
 			name = Products;
 			path = ..;
@@ -166,6 +170,8 @@
 				22F0EA1D1E6BC61300FF7F7D /* PPDragDropView.m */,
 				350DE08A1E6AD84100C5818E /* PPTableCellView.h */,
 				350DE08B1E6AD84100C5818E /* PPTableCellView.m */,
+				22B3CA9F1E73B8A800412325 /* PPSettingView.h */,
+				22B3CAA01E73B8A800412325 /* PPSettingView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,7 +234,7 @@
 			);
 			name = PPRows;
 			productName = PPRows;
-			productReference = 22F0E9F11E6A796B00FF7F7D /* PPRows.app */;
+			productReference = 22B3CA9E1E73B61A00412325 /* PPRows.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -334,6 +340,7 @@
 				350DE0881E6AD6F900C5818E /* PPMainViewController.m in Sources */,
 				225CADBD1E719C5500173BE1 /* NSView+PPRows.m in Sources */,
 				350DE08C1E6AD84100C5818E /* PPTableCellView.m in Sources */,
+				22B3CAA11E73B8A800412325 /* PPSettingView.m in Sources */,
 				350DE0871E6AD6F900C5818E /* AppDelegate.m in Sources */,
 				22F0E9F91E6A796B00FF7F7D /* main.m in Sources */,
 				35E1E0321E6D892D006C98F4 /* NSAttributedString+PPRows.m in Sources */,

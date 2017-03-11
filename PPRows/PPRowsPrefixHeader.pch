@@ -23,4 +23,7 @@
 #import "NSView+PPRows.h"
 #import "PPRowsProtocol.h"
 
+extern NSString *const kPPRowsCheckFileTypes;
+extern NSString *const kPPRowsIgnoreFolders;
+
 #endif /* PPRowsPrefixHeader_pch */

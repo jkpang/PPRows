@@ -11,7 +11,11 @@
 #import "PPDragDropView.h"
 #import "NSAttributedString+PPRows.h"
 #import "PPMainModel.h"
+#import "PPSettingView.h"
 #import <PPCounter.h>
+
+NSString *const kPPRowsCheckFileTypes = @"kPPRowsCheckFileTypes";
+NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
 
 @interface PPMainViewController () <NSTableViewDataSource, NSTableViewDelegate, PPDragDropViewDelegate ,PPTableCellViewDelegate>
 
@@ -27,6 +31,7 @@
 
 @property (weak) IBOutlet NSImageView *placeholderImageView;
 @property (weak) IBOutlet NSTextField *placeholderTitle;
+
 @end
 
 @implementation PPMainViewController
@@ -40,7 +45,7 @@
     self.tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
     // 设置拖拽文件代理
     self.dragDropView.delegate = self;
-    // 设置程序初始化宽度
+    // 设置程序窗口初始化宽度
     NSWindow *window = [NSApplication sharedApplication].windows.firstObject;
     CGRect frame = window.frame;
     frame.size.width = 350;
@@ -140,6 +145,7 @@
         frame.size.width = 500;
     }
     [window setFrame:frame display:YES animate:YES];
+    
 }
 
 #pragma mark - PlacehelderView

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 typedef void(^PPRowsCompletion)(NSUInteger fileNumber, NSUInteger codeRows);
 typedef void(^PPRowsError)(NSString *errorInfo);
 
