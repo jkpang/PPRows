@@ -1,6 +1,6 @@
 #PPRows for Mac
 
-![](https://img.shields.io/badge/platform-macOS-red.svg)   ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/version-1.0.0-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-%40CoderPang-yellow.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
+![](https://img.shields.io/badge/platform-Mac OS X-red.svg)   ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/version-1.0.0-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-%40CoderPang-yellow.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
 
 It Can Calculate how many lines of code you write on Mac 
 在Mac上计算你的写了多少行代码
@@ -8,7 +8,7 @@ It Can Calculate how many lines of code you write on Mac
 ![Gif1](https://github.com/jkpang/PPRows/blob/master/source/Gif1.gif)
 ![Gif2](https://github.com/jkpang/PPRows/blob/master/source/Gif2.gif)
 ##Requirements 要求
-* macOS 10.11+
+* Mac OS X 10.11+
 * Xcode 8+
 
 ##Usage 使用方法
@@ -17,7 +17,7 @@ Drag file/folder to the PPRows APP window.
 ##Download 下载地址
 [Point I download <->点我下载](https://github.com/jkpang/PPRows/releases)
 ##Thanks 致谢
-[TinyPNG4Mac](https://github.com/kyleduo/TinyPNG4Mac) This is the TinyPNG image compression site Mac client , Let me know how to use the APPKit framework . 这是TinyPNG 图片压缩网站的Mac客户端 , 让我知道了如何使用APPKit框架
+[TinyPNG4Mac](https://github.com/kyleduo/TinyPNG4Mac) -- This is the TinyPNG image compression site Mac client , Let me know how to use the APPKit framework . 这是TinyPNG 图片压缩网站的Mac客户端 , 让我知道了如何使用APPKit框架
 ##联系方式:
 * Weibo : @CoderPang
 * Email : jkpang@outlook.com
