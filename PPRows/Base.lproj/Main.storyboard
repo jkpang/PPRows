@@ -53,7 +53,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="PPRows Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Github" keyEquivalent="?" id="FKE-Sm-Kum" userLabel="Github">
                                             <connections>
                                                 <action selector="openSourcesAddress:" target="Voe-Tx-rLC" id="vhh-wX-3kG"/>
                                             </connections>
