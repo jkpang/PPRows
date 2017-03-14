@@ -1,0 +1,69 @@
+
+/* Class = "NSMenuItem"; title = "PPRows"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "PPRows";
+
+/* Class = "NSMenuItem"; title = "Quit PPRows"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "退出 PPRows";
+
+/* Class = "NSMenuItem"; title = "About PPRows"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "关于 PPRows";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "AGI-ed-FV5"; */
+"AGI-ed-FV5.title" = "Text Cell";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSTextFieldCell"; title = "TotalFiles: "; ObjectID = "EfS-zW-9JD"; */
+"EfS-zW-9JD.title" = "TotalFiles: ";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "Github"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "Github";
+
+/* Class = "NSMenuItem"; title = "Open…"; ObjectID = "IAo-SY-fd9"; */
+"IAo-SY-fd9.title" = "Open…";
+
+/* Class = "NSWindow"; title = "PPRows"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "PPRows";
+
+/* Class = "NSTextFieldCell"; title = "CodeFiles: "; ObjectID = "OKV-Pi-OBq"; */
+"OKV-Pi-OBq.title" = "CodeFiles: ";
+
+/* Class = "NSTextFieldCell"; title = "FolderName"; ObjectID = "TjD-VD-Fkb"; */
+"TjD-VD-Fkb.title" = "FolderName";
+
+/* Class = "NSTextFieldCell"; title = "PPRows"; ObjectID = "UpS-rV-jki"; */
+"UpS-rV-jki.title" = "PPRows";
+
+/* Class = "NSMenuItem"; title = "New"; ObjectID = "Was-JA-tGl"; */
+"Was-JA-tGl.title" = "New";
+
+/* Class = "NSTextFieldCell"; title = "Drop files/folder here!"; ObjectID = "YTm-Yt-QhF"; */
+"YTm-Yt-QhF.title" = "拖拽文件/文件夹到这儿!";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "File";
+
+/* Class = "NSTextFieldCell"; title = "Ignored folder :"; ObjectID = "cSh-Ip-P2e"; */
+"cSh-Ip-P2e.title" = "忽略的文件夹 :";
+
+/* Class = "NSTextFieldCell"; title = "TotalRows: "; ObjectID = "ci5-iy-QVP"; */
+"ci5-iy-QVP.title" = "TotalRows: ";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "File";
+
+/* Class = "NSTextFieldCell"; title = "CodeRows: "; ObjectID = "euL-9c-wJu"; */
+"euL-9c-wJu.title" = "CodeRows: ";
+
+/* Class = "NSMenu"; title = "PPRows"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "PPRows";
+
+/* Class = "NSTextFieldCell"; title = "File type to detected :"; ObjectID = "uSk-GV-gYK"; */
+"uSk-GV-gYK.title" = "要检测的文件类型 :";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "帮助";

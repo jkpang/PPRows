@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
@@ -160,23 +160,26 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-Pk-pfg">
-                                                                    <rect key="frame" x="67" y="7" width="67" height="16"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CodeFiles: " id="OKV-Pi-OBq">
+                                                                    <rect key="frame" x="67" y="7" width="65" height="16"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="codeFiles: " id="OKV-Pi-OBq">
                                                                         <font key="font" metaFont="cellTitle"/>
                                                                         <color key="textColor" white="0.98191065436241609" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P2Q-co-rWb">
-                                                                    <rect key="frame" x="140" y="7" width="71" height="16"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CodeRows: " id="euL-9c-wJu">
+                                                                    <rect key="frame" x="135" y="7" width="69" height="16"/>
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="codeRows: " id="euL-9c-wJu">
                                                                         <font key="font" metaFont="cellTitle"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="8Zg-aj-iHw">
+                                                                    <rect key="frame" x="320" y="17" width="16" height="16"/>
+                                                                </progressIndicator>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDj-Eq-68p">
-                                                                    <rect key="frame" x="319" y="17" width="16" height="16"/>
+                                                                    <rect key="frame" x="320" y="17" width="16" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="16" id="oY8-km-awt"/>
                                                                         <constraint firstAttribute="height" constant="16" id="yfO-CS-12z"/>
@@ -188,14 +191,16 @@
                                                                 <constraint firstAttribute="trailing" secondItem="ozs-jV-mFw" secondAttribute="trailing" constant="50" id="0xk-sG-XHO"/>
                                                                 <constraint firstItem="ozs-jV-mFw" firstAttribute="top" secondItem="5k3-BR-VSx" secondAttribute="top" constant="2" id="GLt-Dz-0hb"/>
                                                                 <constraint firstItem="P2Q-co-rWb" firstAttribute="bottom" secondItem="5f3-Pk-pfg" secondAttribute="bottom" id="Gom-Zm-6vJ"/>
+                                                                <constraint firstItem="8Zg-aj-iHw" firstAttribute="centerY" secondItem="bQQ-7g-E3V" secondAttribute="centerY" id="GxZ-Gn-7au"/>
                                                                 <constraint firstItem="ozs-jV-mFw" firstAttribute="leading" secondItem="5k3-BR-VSx" secondAttribute="trailing" constant="15" id="Hum-rg-ySe"/>
                                                                 <constraint firstItem="5k3-BR-VSx" firstAttribute="centerY" secondItem="bQQ-7g-E3V" secondAttribute="centerY" id="MFe-Ya-oen"/>
                                                                 <constraint firstItem="5f3-Pk-pfg" firstAttribute="leading" secondItem="ozs-jV-mFw" secondAttribute="leading" id="Qdt-kt-Ohw"/>
                                                                 <constraint firstItem="fDj-Eq-68p" firstAttribute="centerY" secondItem="bQQ-7g-E3V" secondAttribute="centerY" id="X8j-ue-xOp"/>
                                                                 <constraint firstItem="5k3-BR-VSx" firstAttribute="leading" secondItem="bQQ-7g-E3V" secondAttribute="leading" constant="14" id="acK-qK-XPc"/>
-                                                                <constraint firstItem="P2Q-co-rWb" firstAttribute="leading" secondItem="5f3-Pk-pfg" secondAttribute="trailing" constant="10" id="gHc-zD-wv3"/>
+                                                                <constraint firstItem="P2Q-co-rWb" firstAttribute="leading" secondItem="5f3-Pk-pfg" secondAttribute="trailing" constant="7" id="gHc-zD-wv3"/>
+                                                                <constraint firstAttribute="trailing" secondItem="8Zg-aj-iHw" secondAttribute="trailing" constant="14" id="i8K-7p-C7b"/>
                                                                 <constraint firstItem="5f3-Pk-pfg" firstAttribute="bottom" secondItem="5k3-BR-VSx" secondAttribute="bottom" constant="-2" id="n2I-Fm-r2b"/>
-                                                                <constraint firstAttribute="trailing" secondItem="fDj-Eq-68p" secondAttribute="trailing" constant="15" id="xQv-o5-ZbT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="fDj-Eq-68p" secondAttribute="trailing" constant="14" id="xQv-o5-ZbT"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="codeRows" destination="P2Q-co-rWb" id="Wgl-oK-43j"/>
@@ -203,6 +208,7 @@
                                                                 <outlet property="fileName" destination="ozs-jV-mFw" id="fUH-nn-edi"/>
                                                                 <outlet property="fileNumber" destination="5f3-Pk-pfg" id="3wM-QW-4Dy"/>
                                                                 <outlet property="finishedImageView" destination="fDj-Eq-68p" id="lWm-LG-uxN"/>
+                                                                <outlet property="progressIndicator" destination="8Zg-aj-iHw" id="4rI-dC-166"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -237,8 +243,8 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="placeholder" id="vhx-VC-wNP"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="vDw-iY-dnn">
-                                <rect key="frame" x="99" y="113" width="152" height="18"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="拖入文件/文件夹到这里" id="YTm-Yt-QhF">
+                                <rect key="frame" x="96" y="113" width="158" height="18"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop files/folder here!" id="YTm-Yt-QhF">
                                     <font key="font" metaFont="systemBold" size="14"/>
                                     <color key="textColor" white="1" alpha="0.90239762931034484" colorSpace="deviceWhite"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -303,18 +309,18 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </tokenFieldCell>
                                     </tokenField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-fQ-WAe">
-                                        <rect key="frame" x="5" y="319" width="114" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="要检测的文件类型:" id="uSk-GV-gYK">
-                                            <font key="font" metaFont="system"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-fQ-WAe">
+                                        <rect key="frame" x="5" y="319" width="140" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="File type to detected :" id="uSk-GV-gYK">
+                                            <font key="font" metaFont="systemMedium" size="13"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66A-nX-uiZ">
-                                        <rect key="frame" x="5" y="133" width="88" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="忽略的文件夹:" id="cSh-Ip-P2e">
-                                            <font key="font" metaFont="system"/>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="66A-nX-uiZ">
+                                        <rect key="frame" x="5" y="133" width="100" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ignored folder :" id="cSh-Ip-P2e">
+                                            <font key="font" metaFont="systemMedium" size="13"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -386,9 +392,9 @@
     </scenes>
     <resources>
         <image name="background" width="350" height="350"/>
-        <image name="finishe" width="24" height="24"/>
-        <image name="folder" width="32" height="32"/>
+        <image name="finishe" width="32" height="32"/>
+        <image name="folder" width="48" height="48"/>
         <image name="placeholder" width="256" height="256"/>
-        <image name="setting" width="35.5" height="24"/>
+        <image name="setting" width="47" height="32"/>
     </resources>
 </document>

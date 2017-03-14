@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  PPRows
+
+  Created by AndyPang on 17/3/14.
+  Copyright © 2017年 AndyPang. All rights reserved.
+*/
+
+// 计算中...
+"In calculation..." = "In calculation...";
+
+// 代码行数
+"codeRows:" = "codeRows: %ld";
+
+// 代码文件数
+"codeFiles:" = "codeFiles: %ld";
+
+// 文件总数
+"Total files" = "Total: %ld code files";
+
+// 总代码行数
+"Total code rows" = "%ld rows of code";

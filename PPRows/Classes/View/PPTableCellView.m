@@ -21,6 +21,8 @@
 @property (weak) IBOutlet NSTextField *fileNumber;
 /** 该文件内总代码行数*/
 @property (weak) IBOutlet NSTextField *codeRows;
+/** 活动指示器*/
+@property (weak) IBOutlet NSProgressIndicator *progressIndicator;
 /** 计算完成时显示的图片*/
 @property (weak) IBOutlet NSImageView *finishedImageView;
 
@@ -30,6 +32,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
 }
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
@@ -44,13 +47,16 @@
     self.fileImageView.image = isFolder?[NSImage imageNamed:@"folder"]:[NSImage imageNamed:@"file"];
     
     NSArray *fileList = [model.filePath componentsSeparatedByString:@"/"];
+    
     self.fileName.stringValue = NSStringFormat(@"%ld. %@",index, fileList.lastObject);
     self.finishedImageView.hidden = YES;
-    self.fileNumber.stringValue = @"计算中...";
+    self.fileNumber.stringValue = NSLocalizedString(@"In calculation...", @"In calculation...");
     self.codeRows.stringValue   = @"";
     self.fileName.textColor     = [NSColor gridColor];
     self.fileNumber.textColor   = [NSColor gridColor];
     self.codeRows.textColor     = [NSColor gridColor];
+    
+    [self.progressIndicator startAnimation:nil];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -78,12 +84,15 @@
 - (void)countCodeFiles:(NSUInteger)fileNumber
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
-        self.fileNumber.stringValue = NSStringFormat(@"CodeFiles: %ld",(NSInteger)number);
+        NSString *localizedString = [NSString localizedStringWithFormat:NSLocalizedString(@"codeFiles:", @"codeFiles:"),(NSInteger)number];
+        self.fileNumber.stringValue = localizedString;
         [self.fileNumber updateConstraints];
     } completion:^(CGFloat endNumber) {
         
+        NSString *formatter = [NSNumberFormatter localizedStringFromNumber:@(fileNumber)
+                                                               numberStyle:NSNumberFormatterDecimalStyle];
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.fileNumber.stringValue
-                                                                    rangeText:NSStringFormat(@"%ld",fileNumber)
+                                                                    rangeText:formatter
                                                                 rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                rangeTextColor:fileNumber?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.fileNumber.attributedStringValue = string;
@@ -93,13 +102,16 @@
 - (void)countCodeRows:(NSUInteger)codeRows
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
-        self.codeRows.stringValue = NSStringFormat(@"CodeRows: %ld",(NSInteger)number);
+        NSString *localizedString = [NSString localizedStringWithFormat:NSLocalizedString(@"codeRows:", @"codeRows:"),(NSInteger)number];
+        self.codeRows.stringValue = localizedString;
         [self.codeRows updateConstraints];
     } completion:^(CGFloat endNumber) {
         
         [self countFinished];
+        NSString *formatter = [NSNumberFormatter localizedStringFromNumber:@(codeRows)
+                                                               numberStyle:NSNumberFormatterDecimalStyle];
         NSAttributedString *attributedString = [NSAttributedString pp_attributesWithText:self.codeRows.stringValue
-                                                                               rangeText:NSStringFormat(@"%ld",codeRows)
+                                                                               rangeText:formatter
                                                                            rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                           rangeTextColor:codeRows?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.codeRows.attributedStringValue = attributedString;
@@ -112,6 +124,7 @@
     self.fileName.textColor = NSColorHex(0xFAF0E1);
     self.fileNumber.textColor = NSColorHex(0xFAF0E1);
     self.codeRows.textColor   = NSColorHex(0xFAF0E1);
+    [self.progressIndicator stopAnimation:nil];
     self.finishedImageView.hidden = NO;
 }
 

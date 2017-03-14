@@ -78,7 +78,7 @@ NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
     [self setPlaceholderViewHidden:filePathList.count>0];
     
     [self.dataSource removeAllObjects];
-    self.totalFiles.stringValue = @"计算中...";
+    self.totalFiles.stringValue = NSLocalizedString(@"In calculation...", @"In calculation...");
     self.totalRows.stringValue = @"";
     // 获取拖拽文件路径数据源, 并组装好数据模型
     for (NSString *filePath in filePathList) {
@@ -107,11 +107,15 @@ NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
 - (void)countCodeFiles:(NSUInteger)fileNumber
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
-        self.totalFiles.stringValue = NSStringFormat(@"共%ld个文件",(NSInteger)number);
-
+        NSString *localizedString = [NSString localizedStringWithFormat:NSLocalizedString(@"Total files", @"Total files"),(NSInteger)number];
+        self.totalFiles.stringValue = localizedString;
     } completion:^(CGFloat endNumber) {
+        
+        NSString *formatter = [NSNumberFormatter localizedStringFromNumber:@(fileNumber)
+                                                               numberStyle:NSNumberFormatterDecimalStyle];
+        
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalFiles.stringValue
-                                                                     rangeText:NSStringFormat(@"%ld",fileNumber)
+                                                                     rangeText:formatter
                                                                  rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                 rangeTextColor:fileNumber?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.totalFiles.attributedStringValue = string;
@@ -121,12 +125,14 @@ NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
 - (void)countCodeRows:(NSUInteger)codeRows
 {
     [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
-        self.totalRows.stringValue = NSStringFormat(@"%ld行代码",(NSInteger)number);
-
+        NSString *localizedString = [NSString localizedStringWithFormat:NSLocalizedString(@"Total code rows", @"Total code rows"),(NSInteger)number];
+        self.totalRows.stringValue = localizedString;
     } completion:^(CGFloat endNumber) {
         
+        NSString *formatter = [NSNumberFormatter localizedStringFromNumber:@(codeRows)
+                                                               numberStyle:NSNumberFormatterDecimalStyle];
         NSAttributedString *string = [NSAttributedString pp_attributesWithText:self.totalRows.stringValue
-                                                                     rangeText:NSStringFormat(@"%ld",codeRows)
+                                                                     rangeText:formatter
                                                                  rangeTextFont:[NSFont boldSystemFontOfSize:12]
                                                                 rangeTextColor:codeRows?NSColorHex(0x1AB394):NSColorHex(0xE45051)];
         self.totalRows.attributedStringValue = string;
