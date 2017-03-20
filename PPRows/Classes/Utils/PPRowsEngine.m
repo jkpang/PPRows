@@ -13,9 +13,10 @@
 /** 拖入或输入的文件路径*/
 @property (nonatomic, copy) NSString *superPath;
 @property (nonatomic, copy) PPRowsError error;
-/** 标记参与代码行数计算的文件数量*/
+/** 参与计算的代码文件数*/
 @property (nonatomic, assign) NSUInteger codeFileNumber;
-
+/** 参与计算的代码行数*/
+@property (nonatomic, assign) NSUInteger codeRows;
 
 @end
 
@@ -34,8 +35,15 @@
     _superPath = filePath;
     _codeFileNumber = 0;
     
-    NSUInteger codeRows = [self computeFileInfoWithPath:filePath];
-    completion ? completion(_codeFileNumber, codeRows) : nil;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        _codeRows = [self computeFileInfoWithPath:filePath];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion ? completion(_codeFileNumber, _codeRows) : nil;
+        });
+        
+    });
 }
 
 - (NSUInteger)computeFileInfoWithPath:(NSString *)path 
@@ -82,7 +90,9 @@
         _codeFileNumber += 1;
         
         NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        NSArray *array = [content componentsSeparatedByString:@"\n"];
+        NSMutableArray *array = [NSMutableArray arrayWithArray:[content componentsSeparatedByString:@"\n"]];
+        // 清除空行
+        [array removeObjectsInArray:@[@"",@"    "]];
         return array.count;
     }
     

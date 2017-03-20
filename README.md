@@ -1,6 +1,6 @@
 # PPRows for Mac
 
-![](https://img.shields.io/badge/platform-macOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/version-1.1.0-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-%40CoderPang-yellow.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
+![](https://img.shields.io/badge/platform-macOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/version-1.2.0-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-%40CoderPang-yellow.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
 
 It Can Calculate how many lines of code you write on Mac 
 在Mac上计算你写了多少行代码
@@ -22,6 +22,14 @@ Drag file/folder to the PPRows APP window.
 ## Thanks 致谢
 [TinyPNG4Mac](https://github.com/kyleduo/TinyPNG4Mac) -- This is the TinyPNG image compression site Mac client , Let me know how to use the APPKit framework . 这是TinyPNG 图片压缩网站的Mac客户端 , 让我知道了如何使用APPKit框架
 
+## Update Log  更新日志
+### Version 1.2.0   2017.03.20
+Filter out the blank lines in the code line, the calculation is more accurate <-> 过滤掉代码行中的空行,计算更精确
+### Version 1.1.0   2017.03.14
+Language support in Chinese and English <-> 语言支持中文与英文
+### Version 1.0.0   2017.03.11
+PPRows initialize <-> PPRows初始化
+ 
 ## 联系方式:
 * Weibo : @CoderPang
 * Email : jkpang@outlook.com

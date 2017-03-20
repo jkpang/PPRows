@@ -58,27 +58,22 @@
     
     [self.progressIndicator startAnimation:nil];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    [[PPRowsEngine rowsEngine] computeWithFilePath:model.filePath completion:^(NSUInteger codeFileNumber, NSUInteger codeRows) {
+        // 代码文件数/代码行计算完成的回调
+        model.fileNumber = codeFileNumber;
+        model.codeRows   = codeRows;
+        model.countFinished = YES;
         
-        [[PPRowsEngine rowsEngine] computeWithFilePath:model.filePath completion:^(NSUInteger codeFileNumber, NSUInteger codeRows) {
-            // 文本信息处理完成的回调
-            model.fileNumber = codeFileNumber;
-            model.codeRows   = codeRows;
-            model.countFinished = YES;
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self countCodeFiles:codeFileNumber];
-                [self countCodeRows:codeRows];
-                if (_delegate && [_delegate respondsToSelector:@selector(cellCountFinished)]) {
-                    [_delegate cellCountFinished];
-                }
-            });
+        [self countCodeFiles:codeFileNumber];
+        [self countCodeRows:codeRows];
+        if (_delegate && [_delegate respondsToSelector:@selector(cellCountFinished)]) {
+            [_delegate cellCountFinished];
+        }
+        
+    } error:^(NSString *errorInfo) {
+        PPLog(@"%@",errorInfo);
+    }];
 
-        } error:^(NSString *errorInfo) {
-            PPLog(@"%@",errorInfo);
-        }];
-
-    });
 }
 
 - (void)countCodeFiles:(NSUInteger)fileNumber

@@ -11,11 +11,11 @@
 @interface PPMainModel : NSObject
 
 /** 文件路径*/
-@property (copy  ) NSString *filePath;
+@property (nonatomic ,copy  ) NSString *filePath;
 /** 文件数量*/
-@property (assign) NSUInteger fileNumber;
+@property (nonatomic ,assign) NSUInteger fileNumber;
 /** 代码行数*/
-@property (assign) NSUInteger codeRows;
+@property (nonatomic ,assign) NSUInteger codeRows;
 /** 是否已经计算完成*/
-@property (assign) BOOL countFinished;
+@property (nonatomic ,assign) BOOL countFinished;
 @end
