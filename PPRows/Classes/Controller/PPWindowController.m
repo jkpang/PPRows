@@ -17,7 +17,7 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
     
-    // 设置titlebar为透明
+    // 设置titlebar为透明 <-> Set titlebar as transparent
     self.window.titlebarAppearsTransparent = YES;
     // 隐藏title
     self.window.titleVisibility = NSWindowTitleHidden;

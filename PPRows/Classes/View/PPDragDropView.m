@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    // The type of data that is monitored by the registered view drag event type
     // 注册view拖动事件所监听的数据类型为'文件'类型
     [self registerForDraggedTypes:@[NSFilenamesPboardType]];
 }
@@ -26,7 +27,7 @@
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender
 {
     NSPasteboard *pboard = [sender draggingPasteboard];
-    // 过滤掉非法的数据类型
+    // 过滤掉非法的数据类型 <-> Filter out illegal data types
     if ([[pboard types] containsObject:NSFilenamesPboardType]) {
         return NSDragOperationCopy;
     }
@@ -37,6 +38,8 @@
 - (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender
 {
     NSPasteboard *pboard = [sender draggingPasteboard];
+    
+    // Extract the required NSFilenamesPboardType data from the clipboard
     // 从粘贴板中提取需要的NSFilenamesPboardType数据
     NSArray *filePathList = [pboard propertyListForType:NSFilenamesPboardType];
     

@@ -14,18 +14,20 @@ typedef void(^PPRowsError)(NSString *errorInfo);
 @interface PPRowsEngine : NSObject
 
 /**
+ Convenient construction method
  便利构造方法
 
- @return 返回一个PPRowsEngine的实例
+ @return 返回一个PPRowsEngine的实例 <-> Returns an instance of the PPRowsEngine object
  */
 + (instancetype)rowsEngine;
 
 /**
- 计算拖入/输入的文件夹内所有的代码文件以及总代码行数
+ Calculate all the code files and the number of lines of code in the folder that dragged / imported
+ 计算拖入/输入的文件夹内所有的代码文件以及代码行数
 
- @param filePath 文件路径
- @param completion 计算完成的回调
- @param error 文件不存在的错误回调
+ @param filePath 文件路径 <-> File path
+ @param completion 计算完成的回调 <-> Completed callback
+ @param error 文件不存在的错误回调 <-> File does not exist error callback
  */
 - (void)computeWithFilePath:(NSString *)filePath
                  completion:(PPRowsCompletion)completion

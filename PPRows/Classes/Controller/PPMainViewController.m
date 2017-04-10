@@ -39,12 +39,16 @@ NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    // Set Vertical scroll bar Style
     // 设置垂直滚动条的样式
     self.tableView.enclosingScrollView.scrollerStyle = NSScrollerStyleOverlay;
+    // Set cell click to select the status to None
     // 设置cell点击选择状态为None
     self.tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
+    // Set the drag file delegate
     // 设置拖拽文件代理
     self.dragDropView.delegate = self;
+    // Set the program window to initialize the width
     // 设置程序窗口初始化宽度
     NSWindow *window = [NSApplication sharedApplication].windows.firstObject;
     CGRect frame = window.frame;
@@ -80,6 +84,8 @@ NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
     [self.dataSource removeAllObjects];
     self.totalFiles.stringValue = NSLocalizedString(@"In calculation...", @"In calculation...");
     self.totalRows.stringValue = @"";
+    
+    // Get the drag file path data source, and assemble the data model
     // 获取拖拽文件路径数据源, 并组装好数据模型
     for (NSString *filePath in filePathList) {
         PPMainModel *model = [PPMainModel new];
@@ -93,6 +99,7 @@ NSString *const kPPRowsIgnoreFolders = @"kPPRowsIgnoreFolders";
 #pragma mark - PPTableCellViewDelegate
 - (void)cellCountFinished
 {
+    // Each time a cell of the file, calculate the total number of documents and the total amount of code
     // 每处理完一个cell的文件, 都计算一次总文件数量与总代码量
     NSUInteger fileNumber = 0;
     NSUInteger codeRows = 0;

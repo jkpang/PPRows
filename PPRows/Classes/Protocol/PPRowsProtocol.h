@@ -15,6 +15,7 @@
 @protocol PPDragDropViewDelegate <NSObject>
 
 /**
+ Callback the user to drag the file path array
  回调用户拖拽文件的路径数组
 
  @param filePathList 文件路径数组
@@ -28,6 +29,7 @@
 @protocol PPTableCellViewDelegate <NSObject>
 
 /**
+ Each cell file is calculated to complete the callback
  每个cell内文件计算完成的回调
  */
 - (void)cellCountFinished;
