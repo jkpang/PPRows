@@ -5,12 +5,17 @@
 It Can Calculate how many lines of code you write on Mac 
 在Mac上计算你写了多少行代码
 
-* 1.Support the detection of the number of code folders involved in the calculation and the number of lines of code <-> 支持检测参与计算的代码文件夹数量以及代码行数;</br>
-* 2.Support for simultaneous detection of multiple file / folder code <-> 支持同时检测多文件/多文件夹代码;</br>
-* 3.Supports custom detection of file types, such as: C, swift, OC, Java,... <-> 支持自定义检测的文件类型,例如: c,swift,oc, java....类型的代码文件;</br>
-* 4.Support for custom need to ignore the detection of folders, such as: iOS project in the Pods folder <-> 支持自定义需要忽略检测的文件夹, 例如: iOS工程中的Pods文件夹;</br>
-* 5.Support Chinese and English, follow system language changes (V1.1.0 support) <-> 支持中文与英文,跟随系统语言变化 (v1.1.0起支持)</br>
-* 6.Support for ignoring empty lines in code, more accurate calculation of number of lines (v1.2.0 support) <-> 支持忽略代码中的空行, 代码行数计算更精确(v1.2.0起支持).</br>
+* 1.Support the detection of the number of code folders involved in the calculation and the number of lines of code</br>支持检测参与计算的代码文件夹数量以及代码行数;</br>
+  
+* 2.Support for simultaneous detection of multiple file / folder code </br>支持同时检测多文件/多文件夹代码;</br>
+ 
+* 3.Supports custom detection of file types, such as: C, swift, OC, Java,... </br> 支持自定义检测的文件类型,例如: c,swift,oc, java....类型的代码文件;</br>
+
+* 4.Support for custom need to ignore the detection of folders, such as: iOS project in the Pods folder </br>支持自定义需要忽略检测的文件夹, 例如: iOS工程中的Pods文件夹;</br>
+
+* 5.Support Chinese and English, follow system language changes (V1.1.0 support) </br>支持中文与英文,跟随系统语言变化 (v1.1.0起支持)</br>
+ 
+* 6.Support for ignoring empty lines in code, more accurate calculation of number of lines (v1.2.0 support) </br>支持忽略代码中的空行, 代码行数计算更精确(v1.2.0起支持).</br>
 
 
 ![Gif1](https://github.com/jkpang/PPRows/blob/master/source/Gif1.gif)
