@@ -1,6 +1,6 @@
 # PPRows for Mac
 
-![](https://img.shields.io/badge/platform-macOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/version-1.2.0-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-%40CoderPang-yellow.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
+![](https://img.shields.io/badge/platform-macOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/version-1.2.0-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-jkpang--%E5%BA%9E-red.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
 
 It Can Calculate how many lines of code you write on Mac 
 在Mac上计算你写了多少行代码
@@ -44,7 +44,7 @@ Language support in Chinese and English <-> 语言支持中文与英文
 PPRows initialize <-> PPRows初始化
  
 ## 联系方式:
-* Weibo : @CoderPang
+* Weibo : [@jkpang-庞]((http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1))
 * Email : jkpang@outlook.com
 * QQ群 : 323408051
 
