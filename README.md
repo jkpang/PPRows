@@ -2,6 +2,8 @@
 
 ![](https://img.shields.io/badge/platform-macOS-red.svg) ![](https://img.shields.io/badge/language-Objective--C-orange.svg)  ![](https://img.shields.io/badge/version-1.2.1-blue.svg) ![](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)  [![](https://img.shields.io/badge/weibo-jkpang--%E5%BA%9E-red.svg)](http://weibo.com/5743737098/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
 
+![APPIcon](https://github.com/jkpang/PPRows/blob/master/source/AppIcon.png)
+
 It Can Calculate how many lines of code you write on Mac 
 在Mac上计算你写了多少行代码
 
