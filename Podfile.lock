@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PPCounter:
-    :commit: 171948eb76e3cd56e79daf328c88b92aed60d705
+    :commit: 98303253c6da061c25533e174386e10207edd514
     :git: https://github.com/jkpang/PPCounter.git
 
 SPEC CHECKSUMS:
@@ -18,4 +18,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1a2e94e9655ad5bcc1b5c565ef9d3cafb231abb9
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

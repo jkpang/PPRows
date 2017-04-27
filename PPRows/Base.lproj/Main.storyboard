@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
@@ -106,7 +106,7 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="background" id="Ona-AW-LGP"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-zv-S1U">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-zv-S1U">
                                 <rect key="frame" x="148" y="328" width="55" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PPRows" id="UpS-rV-jki">
                                     <font key="font" metaFont="systemSemibold" size="13"/>
@@ -151,7 +151,7 @@
                                                                     </constraints>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="folder" id="gZM-bk-zNs"/>
                                                                 </imageView>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ozs-jV-mFw">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozs-jV-mFw">
                                                                     <rect key="frame" x="67" y="25" width="235" height="18"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="FolderName" id="TjD-VD-Fkb">
                                                                         <font key="font" metaFont="systemBold" size="14"/>
@@ -159,7 +159,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-Pk-pfg">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-Pk-pfg">
                                                                     <rect key="frame" x="67" y="7" width="65" height="16"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="codeFiles: " id="OKV-Pi-OBq">
                                                                         <font key="font" metaFont="cellTitle"/>
@@ -167,7 +167,7 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P2Q-co-rWb">
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2Q-co-rWb">
                                                                     <rect key="frame" x="135" y="7" width="69" height="16"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="codeRows: " id="euL-9c-wJu">
                                                                         <font key="font" metaFont="cellTitle"/>
@@ -242,8 +242,8 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="placeholder" id="vhx-VC-wNP"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="vDw-iY-dnn">
-                                <rect key="frame" x="96" y="113" width="158" height="18"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" alphaValue="0.40000000000000002" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDw-iY-dnn">
+                                <rect key="frame" x="97" y="113" width="156" height="18"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop files/folder here!" id="YTm-Yt-QhF">
                                     <font key="font" metaFont="systemBold" size="14"/>
                                     <color key="textColor" white="1" alpha="0.90239762931034484" colorSpace="deviceWhite"/>
@@ -253,7 +253,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="IeH-oR-ePf" customClass="PPDragDropView">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-xe-XqZ">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-xe-XqZ">
                                         <rect key="frame" x="12" y="14" width="67" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="TotalFiles: " id="EfS-zW-9JD">
                                             <font key="font" metaFont="systemMedium" size="12"/>
@@ -261,7 +261,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-5g-YEd">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-5g-YEd">
                                         <rect key="frame" x="76" y="14" width="71" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="TotalRows: " id="ci5-iy-QVP">
                                             <font key="font" metaFont="systemMedium" size="12"/>
@@ -297,7 +297,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="cTC-Up-8N2" userLabel="SettingView" customClass="PPSettingView">
                                 <rect key="frame" x="350" y="0.0" width="150" height="350"/>
                                 <subviews>
-                                    <tokenField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a6u-YS-eSv">
+                                    <tokenField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a6u-YS-eSv">
                                         <rect key="frame" x="2" y="164" width="146" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="146" id="7fq-cz-Xmm"/>
@@ -309,7 +309,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </tokenFieldCell>
                                     </tokenField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-fQ-WAe">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-fQ-WAe">
                                         <rect key="frame" x="5" y="319" width="140" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="File type to detected :" id="uSk-GV-gYK">
                                             <font key="font" metaFont="systemMedium" size="13"/>
@@ -317,7 +317,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="66A-nX-uiZ">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66A-nX-uiZ">
                                         <rect key="frame" x="5" y="133" width="100" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ignored folder :" id="cSh-Ip-P2e">
                                             <font key="font" metaFont="systemMedium" size="13"/>
@@ -325,7 +325,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <tokenField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i0j-27-NTN">
+                                    <tokenField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0j-27-NTN">
                                         <rect key="frame" x="2" y="18" width="146" height="110"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="146" id="5Dk-fX-tAS"/>
