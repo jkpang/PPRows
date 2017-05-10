@@ -39,9 +39,9 @@ Drag file/folder to the PPRows APP window.
 
 ## Explain 说明
 
-##### Before writing this "Explain" PPRows unfortunately was someone else copy charges shelves App Store, and here solemnly explain:(App Store: https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12):
+##### Before writing this "Explain" PPRows unfortunately was someone else copy charges shelves App Store(App Store: https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12 ) , and here solemnly explain::
 PPRows open source is the original intention and iOS / macOS developers to communicate with each other, the code can be used free of charge, but never allowed to replace the UI shelves App Store charges low-quality behavior.😡😡😡👎👎👎
-##### 在写这个说明之前PPRows很不幸的被别人copy收费上架App Store了,这里郑重说明一下:(App Store: https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12):
+##### 在写这个"说明"之前PPRows很不幸的被别人copy收费上架App Store(App Store: https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12 ) 了,这里郑重说明一下:
 PPRows开源的初衷是为了和iOS/macOS开发者相互交流技术,其代码可以免费使用,但绝不允许有更换UI上架App Store收费的低素质的垃圾行为😡😡😡👎👎👎.
 
 ## Update Log  更新日志
