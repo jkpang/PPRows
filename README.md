@@ -37,6 +37,13 @@ Drag file/folder to the PPRows APP window.
 ## Thanks 致谢
 [TinyPNG4Mac](https://github.com/kyleduo/TinyPNG4Mac) -- This is the TinyPNG image compression site Mac client , Let me know how to use the APPKit framework . 这是TinyPNG 图片压缩网站的Mac客户端 , 让我知道了如何使用APPKit框架
 
+## Explain 说明
+
+##### In the open source before the PPRows unfortunately was someone else copy charges shelves App Store, and here solemnly explain(App Store: https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12):
+PPRows open source is the original intention and iOS / macOS developers to communicate with each other, the code can be used free of charge, but never allowed to replace the UI shelves App Store charges low-quality behavior.😡😡😡👎👎👎
+##### 在开源之前PPRows很不幸的被别人copy收费上架App Store了,这里郑重说明一下(App Store: https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12):
+PPRows开源的初衷是为了和iOS/macOS开发者相互交流技术,其代码可以免费使用,但绝不允许有更换UI上架App Store收费的低素质的垃圾行为😡😡😡👎👎👎.
+
 ## Update Log  更新日志
 ### Version 1.2.0   2017.03.20
 Filter out the blank lines in the code line, the calculation is more accurate <-> 过滤掉代码行中的空行,计算更精确
