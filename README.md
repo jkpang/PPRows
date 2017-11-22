@@ -4,6 +4,8 @@
 
 ![APPIcon](https://github.com/jkpang/PPRows/blob/master/source/AppIcon.png)
 
+[![App_Store](https://github.com/jkpang/PPHub-Feedback/blob/master/Resource/Download_on_the_App_Store_135x40.svg)](https://itunes.apple.com/cn/app/pprows/id1315592646?l=zh&ls=1&mt=12)
+
 It Can Calculate how many lines of code you write on Mac 
 在Mac上计算你写了多少行代码
 
