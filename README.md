@@ -46,6 +46,10 @@ The original intention Of PPRows open source is that I want to have the communic
 ##### 在PPRows开源后很不幸被别人copy,并收费上架到了App Store( https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12 ), 现在郑重说明一下:
 PPRows开源的初衷是为了和iOS/macOS开发者相互交流技术,其代码可以免费使用,但绝不允许有更换UI上架App Store收费的低素质的垃圾行为😡😡😡👎👎👎.
 
+## My APPs 我的APP
+##### [PPHub](https://github.com/jkpang/PPHub-Feedback) - A beautiful GitHub third party iOS client [ App Store](https://itunes.apple.com/app/id1314212521)
+##### [PPHub](https://github.com/jkpang/PPHub-Feedback) - 一个漂亮的GitHub第三方iOS客户端 [ App Store](https://itunes.apple.com/app/id1314212521)
+
 ## Update Log  更新日志
 ### Version 1.2.0   2017.03.20
 Filter out the blank lines in the code line, the calculation is more accurate <-> 过滤掉代码行中的空行,计算更精确
