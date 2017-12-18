@@ -2,7 +2,7 @@
 
 -----
 
-## [1.2.0](https://github.com/EyreFree/EFQRCode/releases/tag/1.2.0) (2017-03-20)
+## [1.2.0](https://github.com/jkpang/PPRows/releases/tag/1.2.0) (2017-03-20)
 
 #### Add
 
@@ -10,7 +10,7 @@
 
 ---
 
-## [1.1.0](https://github.com/EyreFree/EFQRCode/releases/tag/1.1.0) (2017-03-14)
+## [1.1.0](https://github.com/jkpang/PPRows/releases/tag/1.1.0) (2017-03-14)
 
 #### Add
 
@@ -18,6 +18,6 @@
 
 ---
 
-## [1.0.0](https://github.com/EyreFree/EFQRCode/releases/tag/1.0.0) (2017-03-11)
+## [1.0.0](https://github.com/jkpang/PPRows/releases/tag/1.0.0) (2017-03-11)
 
 * PPRows initialize.

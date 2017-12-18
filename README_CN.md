@@ -5,7 +5,7 @@
 	<img src="https://img.shields.io/badge/language-Objective--C-orange.svg" />
 	<img src="https://img.shields.io/badge/version-1.2.1-blue.svg">
 	<img src="https://img.shields.io/badge/license-GPLv3.0-brightgreen.svg">
-	<a href="http://weibo.com/jkpang"><img src="https://img.shields.io/badge/weibo-@jkpang-red.svg?style=flat"></a>
+	<a href="http://weibo.com/jkpang"><img src="https://img.shields.io/badge/weibo-jkpang--%E5%BA%9E-red.svg"></a>
 	<img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
 </p>
 
