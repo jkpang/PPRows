@@ -89,7 +89,7 @@
 
 - (void)countCodeFiles:(NSUInteger)fileNumber
 {
-    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
+    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:fileNumber duration:1.5f animationOptions:PPCounterAnimationOptionCurveLinear currentNumber:^(CGFloat number) {
         NSString *localizedString = [NSString localizedStringWithFormat:NSLocalizedString(@"codeFiles:", @"codeFiles:"),(NSInteger)number];
         self.fileNumber.stringValue = localizedString;
         [self.fileNumber updateConstraints];
@@ -107,7 +107,7 @@
 }
 - (void)countCodeRows:(NSUInteger)codeRows
 {
-    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveEaseInOut currentNumber:^(CGFloat number) {
+    [[PPCounterEngine counterEngine] fromNumber:0 toNumber:codeRows duration:1.5f animationOptions:PPCounterAnimationOptionCurveLinear currentNumber:^(CGFloat number) {
         NSString *localizedString = [NSString localizedStringWithFormat:NSLocalizedString(@"codeRows:", @"codeRows:"),(NSInteger)number];
         self.codeRows.stringValue = localizedString;
         [self.codeRows updateConstraints];

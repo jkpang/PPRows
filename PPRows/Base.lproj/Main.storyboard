@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
@@ -82,6 +82,9 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="350" height="350"/>
                         <value key="maxSize" type="size" width="350" height="350"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="Ar1-pw-ZvW"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -144,23 +147,23 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5k3-BR-VSx">
-                                                                    <rect key="frame" x="14" y="5" width="40" height="40"/>
+                                                                    <rect key="frame" x="14" y="8" width="35" height="35"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="Ax2-fe-r7y"/>
-                                                                        <constraint firstAttribute="width" constant="40" id="o2r-Eg-WzW"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="Ax2-fe-r7y"/>
+                                                                        <constraint firstAttribute="width" constant="35" id="o2r-Eg-WzW"/>
                                                                     </constraints>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="folder" id="gZM-bk-zNs"/>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozs-jV-mFw">
-                                                                    <rect key="frame" x="67" y="25" width="235" height="18"/>
+                                                                    <rect key="frame" x="57" y="25" width="245" height="18"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="FolderName" id="TjD-VD-Fkb">
-                                                                        <font key="font" metaFont="systemBold" size="14"/>
+                                                                        <font key="font" metaFont="systemSemibold" size="14"/>
                                                                         <color key="textColor" white="0.97931522651006708" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-Pk-pfg">
-                                                                    <rect key="frame" x="67" y="7" width="65" height="16"/>
+                                                                    <rect key="frame" x="57" y="8" width="65" height="16"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="codeFiles: " id="OKV-Pi-OBq">
                                                                         <font key="font" metaFont="cellTitle"/>
                                                                         <color key="textColor" white="0.98191065436241609" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,7 +171,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2Q-co-rWb">
-                                                                    <rect key="frame" x="135" y="7" width="69" height="16"/>
+                                                                    <rect key="frame" x="125" y="8" width="69" height="16"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="codeRows: " id="euL-9c-wJu">
                                                                         <font key="font" metaFont="cellTitle"/>
                                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -189,17 +192,17 @@
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="ozs-jV-mFw" secondAttribute="trailing" constant="50" id="0xk-sG-XHO"/>
-                                                                <constraint firstItem="ozs-jV-mFw" firstAttribute="top" secondItem="5k3-BR-VSx" secondAttribute="top" constant="2" id="GLt-Dz-0hb"/>
+                                                                <constraint firstItem="ozs-jV-mFw" firstAttribute="top" secondItem="5k3-BR-VSx" secondAttribute="top" id="GLt-Dz-0hb"/>
                                                                 <constraint firstItem="P2Q-co-rWb" firstAttribute="bottom" secondItem="5f3-Pk-pfg" secondAttribute="bottom" id="Gom-Zm-6vJ"/>
                                                                 <constraint firstItem="8Zg-aj-iHw" firstAttribute="centerY" secondItem="bQQ-7g-E3V" secondAttribute="centerY" id="GxZ-Gn-7au"/>
-                                                                <constraint firstItem="ozs-jV-mFw" firstAttribute="leading" secondItem="5k3-BR-VSx" secondAttribute="trailing" constant="15" id="Hum-rg-ySe"/>
+                                                                <constraint firstItem="ozs-jV-mFw" firstAttribute="leading" secondItem="5k3-BR-VSx" secondAttribute="trailing" constant="10" id="Hum-rg-ySe"/>
                                                                 <constraint firstItem="5k3-BR-VSx" firstAttribute="centerY" secondItem="bQQ-7g-E3V" secondAttribute="centerY" id="MFe-Ya-oen"/>
                                                                 <constraint firstItem="5f3-Pk-pfg" firstAttribute="leading" secondItem="ozs-jV-mFw" secondAttribute="leading" id="Qdt-kt-Ohw"/>
                                                                 <constraint firstItem="fDj-Eq-68p" firstAttribute="centerY" secondItem="bQQ-7g-E3V" secondAttribute="centerY" id="X8j-ue-xOp"/>
                                                                 <constraint firstItem="5k3-BR-VSx" firstAttribute="leading" secondItem="bQQ-7g-E3V" secondAttribute="leading" constant="14" id="acK-qK-XPc"/>
                                                                 <constraint firstItem="P2Q-co-rWb" firstAttribute="leading" secondItem="5f3-Pk-pfg" secondAttribute="trailing" constant="7" id="gHc-zD-wv3"/>
                                                                 <constraint firstAttribute="trailing" secondItem="8Zg-aj-iHw" secondAttribute="trailing" constant="14" id="i8K-7p-C7b"/>
-                                                                <constraint firstItem="5f3-Pk-pfg" firstAttribute="bottom" secondItem="5k3-BR-VSx" secondAttribute="bottom" constant="-2" id="n2I-Fm-r2b"/>
+                                                                <constraint firstItem="5f3-Pk-pfg" firstAttribute="bottom" secondItem="5k3-BR-VSx" secondAttribute="bottom" id="n2I-Fm-r2b"/>
                                                                 <constraint firstAttribute="trailing" secondItem="fDj-Eq-68p" secondAttribute="trailing" constant="14" id="xQv-o5-ZbT"/>
                                                             </constraints>
                                                             <connections>
@@ -246,7 +249,7 @@
                                 <rect key="frame" x="97" y="113" width="156" height="18"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drop files/folder here!" id="YTm-Yt-QhF">
                                     <font key="font" metaFont="systemBold" size="14"/>
-                                    <color key="textColor" white="1" alpha="0.90239762931034484" colorSpace="deviceWhite"/>
+                                    <color key="textColor" white="1" alpha="0.60148223458904104" colorSpace="deviceWhite"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -395,6 +398,6 @@
         <image name="finishe" width="32" height="32"/>
         <image name="folder" width="48" height="48"/>
         <image name="placeholder" width="256" height="256"/>
-        <image name="setting" width="47" height="32"/>
+        <image name="setting" width="32" height="32"/>
     </resources>
 </document>
