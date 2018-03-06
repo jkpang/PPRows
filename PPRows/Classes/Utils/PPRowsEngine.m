@@ -102,10 +102,16 @@
         _codeFileNumber += 1;
         
         NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        NSMutableArray *array = [NSMutableArray arrayWithArray:[content componentsSeparatedByString:@"\n"]];
-        // 清除空行 <-> Clear blank
-        [array removeObjectsInArray:@[@"",@"    "]];
-        return array.count;
+        NSArray<NSString *> *array = [content componentsSeparatedByString:@"\n"];
+        // 正则匹配空行
+        NSInteger codeLines = 0;
+        for (NSString *code in array) {
+            NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"^ *$"];
+            if ([pred evaluateWithObject:code] == NO) {
+                codeLines += 1;
+            }
+        }
+        return codeLines;
     }
     
 }
