@@ -62,7 +62,7 @@ After PPRows opening source, it is unfortunately be copied by someone else, and 
 
 ## Projects Recommended
 
-- [PPHub](https://github.com/jkpang/PPHub-Feedback): A beautiful GitHub third party iOS client [ App Store](https://itunes.apple.com/app/id1314212521)
+- [PPHub](https://github.com/PPHubApp/PPHub-Feedback): A beautiful GitHub third party iOS client [ App Store](https://itunes.apple.com/app/id1314212521)
  
 ## Contact
 
