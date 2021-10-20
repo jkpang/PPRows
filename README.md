@@ -38,7 +38,7 @@ Drag file / folder to the PPRows App window.
 
 ### AppStore
 
-Click download button below to purchase from AppStore(Only $0.5), give affirmation and support to my work:
+Click download button below to purchase from AppStore (only $0.5), give affirmation and support to my work:
 
 <a target='_blank' href='https://itunes.apple.com/cn/app/VSCAM/id1315592646?mt=8'>
 	<img src='http://ww2.sinaimg.cn/large/0060lm7Tgw1f1hgrs1ebwj308102q0sp.jpg' width='144' height='49'/>
@@ -54,11 +54,11 @@ You can also download the installation package directly from GitHub:
 
 - [TinyPNG4Mac](https://github.com/kyleduo/TinyPNG4Mac): This is the TinyPNG image compression site Mac client, let me know how to use the APPKit framework.
 
-## Explaination
+## Explanation
 
 After PPRows opening source, it is unfortunately be copied by someone else, and charged to the [App Store](https://itunes.apple.com/cn/app/lines-of-code/id1218789683?mt=12 ). Now, I need to explain it solemnly:
 
-> The original intention Of PPRows open source is that I want to have the communication with the iOS / macOS developers. The code can be used free of charge, but it never be allowed to replace the UI and publish to the App Store having the charges. It is a low-quality behavior, 😡😡😡👎👎👎.
+> The original intention Of PPRows open source is that I want to have the communication with the iOS / macOS developers. The code can be used free of charge, but It never be allowed to replace the UI and publish to the App Store having the charges. It is a low-quality behavior, 😡😡😡👎👎👎.
 
 ## Projects Recommended
 
